@@ -2714,19 +2714,31 @@ img {
 
 .service-row-item {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 96px;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 60px;
   align-items: center;
-  padding: 100px 0;
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 56px;
+  margin-bottom: 60px;
+  box-shadow: var(--shadow-card);
 }
 
 .service-row-item:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .service-row-item.reverse-row {
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.service-row-item.reverse-row .service-row-left {
+  order: 2;
+}
+
+.service-row-item.reverse-row .service-row-right {
+  order: 1;
 }
 
 .service-row-number {
@@ -3051,20 +3063,22 @@ img {
   
   .service-row-item {
     grid-template-columns: 1fr;
-    gap: 48px;
-    padding: 64px 0;
+    gap: 36px;
+    padding: 32px 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
   }
   
   .service-row-item.reverse-row {
     grid-template-columns: 1fr;
   }
   
-  /* Make sure text column shows first on reversed rows */
+  /* Make sure text column shows first on reversed rows on mobile */
   .service-row-item.reverse-row .service-row-left {
-    order: 2;
+    order: 1;
   }
   .service-row-item.reverse-row .service-row-right {
-    order: 1;
+    order: 2;
   }
   
   .cta-banner-overlay {
