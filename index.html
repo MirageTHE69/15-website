@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marca Creatives | Full-Stack Content Agency</title>
+  <meta name="description" content="Marca Creatives is a full-stack content-driven marketing agency. We build personal brands and B2B business brands from strategy and scripting to production and growth. 800M+ views generated.">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Marca Creatives | Full-Stack Content Agency">
+  <meta property="og:description" content="We build personal brands and business brands that actually get watched. Full-stack in-house content production pipeline.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ STICKY NAV ============ -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <div class="logo">
+        <div class="logo-dot"></div>
+        <span class="logo-text">marca</span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#studio">Platform Guide</a>
+        <a href="services.html">Services</a>
+        <a href="#work">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="#reels">Portfolio</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#contact" class="btn-primary">Start a Project</a>
+        <a href="#contact" class="btn-arrow" aria-label="Contact Us">&#8599;</a>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="tag-badge" data-reveal>
+        <span class="tag-dot"></span>
+        Your full-stack content agency
+      </div>
+      <h1 class="hero-title" data-reveal data-reveal-delay="80">
+        We build brands that <span class="accent-text">get watched</span> — strategy to publish
+      </h1>
+      <p class="hero-description" data-reveal data-reveal-delay="160">
+        Most brands don't fail on ad spend — they fail on content. We build strategy, produce everything in-house, and grow personal &amp; business brands that actually get watched. <strong>800M+ views and counting.</strong>
+      </p>
+    </div>
+
+    <!-- SUBTLY CURVED HERO CAROUSEL -->
+    <div class="arc-container">
+      <div class="arc-wheel-wrapper" id="arcWheelWrapper">
+        <div class="arc-wheel" id="arcWheel" data-marquee data-mbase="260">
+          <!-- 28 Cards placed in a gentle circular arc. Center is further down, and card-inner has counter-spin to remain straight! -->
+          <div class="arc-card" style="transform: rotate(0.00deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(0.00deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_1.png" alt="Dr. Shah · Dermatology Reel"><span class="card-caption">Dr. Shah · reel</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(12.86deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-12.86deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_2.png" alt="Nutty Affair · Brand Film"><span class="card-caption">Nutty Affair · film</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(25.71deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-25.71deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_3.png" alt="Finance · Thumbnail Design"><span class="card-caption">Finance · thumbnail</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(38.57deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-38.57deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_4.png" alt="Verde & Oak · Restaurant Launch"><span class="card-caption">Restaurant · launch</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(51.43deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-51.43deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_5.png" alt="Branding · Cover Design"><span class="card-caption">Cover design</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(64.29deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-64.29deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_6.png" alt="Studio Lume · TVC Stills"><span class="card-caption">Interior · TVC</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(77.14deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-77.14deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_7.png" alt="Clinic · Production Shoot"><span class="card-caption">Clinic · shoot</span></div></div></div></div>
+          
+          <div class="arc-card" style="transform: rotate(90.00deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-90.00deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_1.png" alt="Dr. Shah · Dermatology Reel"><span class="card-caption">Dr. Shah · reel</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(102.86deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-102.86deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_2.png" alt="Nutty Affair · Brand Film"><span class="card-caption">Nutty Affair · film</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(115.71deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-115.71deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_3.png" alt="Finance · Thumbnail Design"><span class="card-caption">Finance · thumbnail</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(128.57deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-128.57deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_4.png" alt="Verde & Oak · Restaurant Launch"><span class="card-caption">Restaurant · launch</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(141.43deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-141.43deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_5.png" alt="Branding · Cover Design"><span class="card-caption">Cover design</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(154.29deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-154.29deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_6.png" alt="Studio Lume · TVC Stills"><span class="card-caption">Interior · TVC</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(167.14deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-167.14deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_7.png" alt="Clinic · Production Shoot"><span class="card-caption">Clinic · shoot</span></div></div></div></div>
+          
+          <div class="arc-card" style="transform: rotate(180.00deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-180.00deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_1.png" alt="Dr. Shah · Dermatology Reel"><span class="card-caption">Dr. Shah · reel</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(192.86deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-192.86deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_2.png" alt="Nutty Affair · Brand Film"><span class="card-caption">Nutty Affair · film</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(205.71deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-205.71deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_3.png" alt="Finance · Thumbnail Design"><span class="card-caption">Finance · thumbnail</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(218.57deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-218.57deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_4.png" alt="Verde & Oak · Restaurant Launch"><span class="card-caption">Restaurant · launch</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(231.43deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-231.43deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_5.png" alt="Branding · Cover Design"><span class="card-caption">Cover design</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(244.29deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-244.29deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_6.png" alt="Studio Lume · TVC Stills"><span class="card-caption">Interior · TVC</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(257.14deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-257.14deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_7.png" alt="Clinic · Production Shoot"><span class="card-caption">Clinic · shoot</span></div></div></div></div>
+          
+          <div class="arc-card" style="transform: rotate(270.00deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-270.00deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_1.png" alt="Dr. Shah · Dermatology Reel"><span class="card-caption">Dr. Shah · reel</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(282.86deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-282.86deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_2.png" alt="Nutty Affair · Brand Film"><span class="card-caption">Nutty Affair · film</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(295.71deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-295.71deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_3.png" alt="Finance · Thumbnail Design"><span class="card-caption">Finance · thumbnail</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(308.57deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-308.57deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_4.png" alt="Verde & Oak · Restaurant Launch"><span class="card-caption">Restaurant · launch</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(321.43deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-321.43deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_5.png" alt="Branding · Cover Design"><span class="card-caption">Cover design</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(334.29deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-334.29deg);"><div class="card-scroll-canceler"><div class="card-rotator floatB"><img src="assets/hero_arc_6.png" alt="Studio Lume · TVC Stills"><span class="card-caption">Interior · TVC</span></div></div></div></div>
+          <div class="arc-card" style="transform: rotate(347.14deg) translateY(-2450px);"><div class="card-inner" style="transform: rotate(-347.14deg);"><div class="card-scroll-canceler"><div class="card-rotator floatA"><img src="assets/hero_arc_7.png" alt="Clinic · Production Shoot"><span class="card-caption">Clinic · shoot</span></div></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLIENT LOGO MARQUEE -->
+    <div class="logo-marquee-section">
+      <div class="logo-marquee-title">Brands &amp; creators who trust Marca</div>
+      <div class="logo-marquee-wrapper">
+        <div class="logo-marquee-track" data-marquee data-mbase="34">
+          <span class="marquee-logo logo-nutty">Nutty Affair</span>
+          <span class="marquee-logo logo-meridian">MERIDIAN</span>
+          <span class="marquee-logo logo-kessler">Kessler &amp; Co.</span>
+          <span class="marquee-logo logo-novo">novo</span>
+          <span class="marquee-logo logo-atlas">ATLAS</span>
+          <span class="marquee-logo logo-form">form&middot;studio</span>
+          <span class="marquee-logo logo-verde">VERDE</span>
+          <!-- Duplicate set for infinite loop -->
+          <span class="marquee-logo logo-nutty">Nutty Affair</span>
+          <span class="marquee-logo logo-meridian">MERIDIAN</span>
+          <span class="marquee-logo logo-kessler">Kessler &amp; Co.</span>
+          <span class="marquee-logo logo-novo">novo</span>
+          <span class="marquee-logo logo-atlas">ATLAS</span>
+          <span class="marquee-logo logo-form">form&middot;studio</span>
+          <span class="marquee-logo logo-verde">VERDE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STAT STRIP ============ -->
+  <section class="stat-strip">
+    <div class="container grid-4">
+      <div class="stat-item" data-reveal>
+        <div class="stat-number">800M+</div>
+        <div class="stat-label">Total views generated</div>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="90">
+        <div class="stat-number">500K+</div>
+        <div class="stat-label">Follower accounts scaled</div>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="180">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Service verticals</div>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="270">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Industries served</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM / EMPATHY ============ -->
+  <section class="empathy-section">
+    <div class="container">
+      <div class="section-tag" data-reveal>THE MARCA APPROACH</div>
+      <div class="grid-2 gap-56">
+        <h2 class="empathy-title" data-reveal>
+          Content that gets watched — and builds something real.
+        </h2>
+        <div class="empathy-content" data-reveal data-reveal-delay="120">
+          <p class="empathy-lead">
+            Posting constantly but not growing? No time to stay consistent? The feeling you're producing content that just disappears?
+          </p>
+          <p class="empathy-text">
+            That's what we hear all the time. So we don't just start shooting — we listen first. We learn where your brand stands, what's holding it back, and what you actually want to achieve. Only then do we build a strategy that fits you and delivers the results you're after.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEW SECTION: OUR CONTENT STUDIO ============ -->
+  <section id="studio" class="studio-section">
+    <div class="container">
+      <div class="section-tag" data-reveal>OUR CONTENT STUDIO</div>
+      <div class="studio-intro" data-reveal>
+        <h2 class="studio-title font-sans">
+          Content that fits every platform.<br><span class="italic-serif">Made to perform.</span>
+        </h2>
+        <p class="studio-description">
+          From short-form hooks to long-form stories, we plan, shoot and edit content that connects and drives real results.
+        </p>
+      </div>
+
+      <div class="studio-grid" data-reveal data-reveal-delay="100">
+        <!-- Left: platform list -->
+        <div class="platform-list">
+          <div class="platform-item active" data-platform="0">
+            <span class="platform-num">01</span>
+            <div class="platform-info">
+              <h4>Shorts &amp; Reels</h4>
+              <p>15 – 60 sec &bull; Vertical</p>
+            </div>
+          </div>
+          <div class="platform-item" data-platform="1">
+            <span class="platform-num">02</span>
+            <div class="platform-info">
+              <h4>YouTube Videos</h4>
+              <p>5 – 20 min &bull; Horizontal</p>
+            </div>
+          </div>
+          <div class="platform-item" data-platform="2">
+            <span class="platform-num">03</span>
+            <div class="platform-info">
+              <h4>Long Video Shoots</h4>
+              <p>20 min+ &bull; Production</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center / Right: Video mockup frames displayed side-by-side with staggered visual style -->
+        <div class="mockup-display">
+          <!-- Mockup 1: Skincare Vertical Reel -->
+          <div class="mockup-frame frame-vertical active" id="mockup-0">
+            <div class="phone-rim"></div>
+            <div class="mockup-content">
+              <span class="tag-floating">SHORTS / REELS</span>
+              <img src="assets/glow_daily.png" alt="Lumiere Skincare Reel">
+              <!-- Reel UI Overlays -->
+              <div class="reel-overlay">
+                <div class="reel-author">
+                  <span class="avatar-mini">DG</span>
+                  <div>
+                    <span class="author-handle">drift.down.studio</span>
+                    <span class="btn-follow">Follow</span>
+                  </div>
+                </div>
+                <p class="reel-text">Radiance, bottled. For every you.</p>
+                <div class="reel-actions">
+                  <div class="action-item"><span class="icon-heart">♥</span> 12.4K</div>
+                  <div class="action-item"><span class="icon-comment">💬</span> 231</div>
+                  <div class="action-item"><span class="icon-share">↗</span> 512</div>
+                </div>
+              </div>
+              <span class="time-duration">0:15</span>
+            </div>
+          </div>
+
+          <!-- Mockup 2: B2B YouTube Horizontal Video -->
+          <div class="mockup-frame frame-horizontal" id="mockup-1">
+            <div class="monitor-rim"></div>
+            <div class="mockup-content">
+              <span class="tag-floating">YOUTUBE VIDEO</span>
+              <img src="assets/couple_sofa.png" alt="Amazing traction YouTube video">
+              <!-- YouTube Video Overlays -->
+              <button class="btn-play-circle" aria-label="Play video">&#9654;</button>
+              <div class="yt-timeline">
+                <div class="yt-progress" style="width: 32%;"></div>
+              </div>
+              <span class="yt-duration">04:12 / 12:58</span>
+              <div class="yt-meta">
+                <h4>Amazing traction but tiny market</h4>
+                <p>Brand Studio &bull; 128K views &bull; 2 weeks ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mockup 3: Camera Production Vertical Frame -->
+          <div class="mockup-frame frame-vertical" id="mockup-2">
+            <div class="phone-rim"></div>
+            <div class="mockup-content">
+              <span class="tag-floating">LONG VIDEO SHOOTS</span>
+              <img src="assets/hero_arc_7.png" alt="Long Video Shoots">
+              <div class="camera-ui-overlay">
+                <span class="cam-rec">● REC</span>
+                <span class="cam-fps">4K 60FPS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Studio Repurpose Footer Bar -->
+      <div class="studio-bar" data-reveal>
+        <div class="studio-bar-left">
+          <div class="bar-headline">One strategy.<br>Multiple formats.<br>Maximum impact.</div>
+        </div>
+        <div class="studio-bar-center">
+          <p>We repurpose intelligently across platforms to help your brand show up everywhere your audience consumes.</p>
+        </div>
+        <div class="studio-bar-right">
+          <a href="#work" class="btn-border-bottom">See our work &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDESIGNED SERVICES SECTION ============ -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-tag" data-reveal>WHAT WE DO</div>
+      
+      <div class="services-header-split" data-reveal>
+        <h2 class="services-main-title font-sans">
+          Everything under one roof &mdash;<br>no outsourcing, no handoffs,<br>no diluted quality.
+        </h2>
+        <div class="services-header-right">
+          <p>Strategy, storytelling, production and design &mdash; built in-house to create consistent, high-impact content for your brand.</p>
+        </div>
+      </div>
+
+      <!-- Tabbed Service Block wrapped inside a unified card container -->
+      <div class="services-tabbed-container" data-reveal data-reveal-delay="100">
+        <!-- Left: Service vertical tabs -->
+        <div class="services-tabs-menu">
+          <button class="service-tab-btn active" data-service-tab="0">
+            <div class="tab-btn-meta">
+              <span class="tab-btn-num">01</span>
+              <span class="tab-btn-index">1</span>
+            </div>
+            <span class="tab-btn-text">Personal Branding</span>
+            <span class="tab-btn-arrow">&rarr;</span>
+          </button>
+          <button class="service-tab-btn" data-service-tab="1">
+            <div class="tab-btn-meta">
+              <span class="tab-btn-num">02</span>
+            </div>
+            <span class="tab-btn-text">Brand &amp; Business Marketing</span>
+            <span class="tab-btn-arrow">&rarr;</span>
+          </button>
+          <button class="service-tab-btn" data-service-tab="2">
+            <div class="tab-btn-meta">
+              <span class="tab-btn-num">03</span>
+            </div>
+            <span class="tab-btn-text">Branding &amp; Graphic Design</span>
+            <span class="tab-btn-arrow">&rarr;</span>
+          </button>
+        </div>
+
+        <!-- Right: Active content cards -->
+        <div class="services-tab-content-panel">
+          
+          <!-- Inner wrapper for Personal Branding -->
+          <div class="service-tab-pane active" id="service-pane-0">
+            <div class="pane-details">
+              <div class="pane-tag">PERSONAL BRANDING</div>
+              <h3 class="pane-headline">Built around you.<br>Made for attention.</h3>
+              <p class="pane-description">We help individuals build presence that translates into trust, visibility and growth.</p>
+              
+              <div class="pane-badges">
+                <span class="badge">Strategy</span>
+                <span class="badge">Scripting</span>
+                <span class="badge">Shooting</span>
+                <span class="badge">Editing</span>
+                <span class="badge">Growth</span>
+              </div>
+              
+              <div class="pane-stats">
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">2.5M+</span>
+                  <span class="pane-stat-label">Views Generated</span>
+                </div>
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">26K+</span>
+                  <span class="pane-stat-label">Followers Gained</span>
+                </div>
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">98%</span>
+                  <span class="pane-stat-label">Retention Rate</span>
+                </div>
+              </div>
+
+              <a href="personal-branding.html" class="explore-service-link">Explore this service &rarr;</a>
+            </div>
+
+            <!-- Far Right: Phone cards carousel -->
+            <div class="pane-visuals">
+              <div class="phone-carousel">
+                <div class="phone-carousel-card card-left">
+                  <img src="assets/hero_arc_1.png" alt="Dr Shah Cosmetic Dermatology">
+                  <div class="phone-caption"><span>👁 2.1M</span></div>
+                </div>
+                <div class="phone-carousel-card card-center">
+                  <img src="assets/glow_daily.png" alt="Skincare Glow daily">
+                  <div class="phone-caption"><span>👁 1.8M</span></div>
+                  <!-- Camera icon to match mockup -->
+                  <span class="reel-icon-floating">🎬</span>
+                </div>
+                <div class="phone-carousel-card card-right">
+                  <img src="assets/hero_arc_7.png" alt="Clinic shoot scene">
+                  <div class="phone-caption"><span>👁 1.2M</span></div>
+                </div>
+              </div>
+              <div class="phone-carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inner wrapper for Brand & Business Marketing -->
+          <div class="service-tab-pane" id="service-pane-1">
+            <div class="pane-details">
+              <div class="pane-tag">BRAND &amp; BUSINESS MARKETING</div>
+              <h3 class="pane-headline">Scale your business.<br>Drive conversions.</h3>
+              <p class="pane-description">We produce high-end commercial video ads, photography, and TVCs that build brand equity and retail placement.</p>
+              
+              <div class="pane-badges">
+                <span class="badge">Commercials</span>
+                <span class="badge">B2B Ads</span>
+                <span class="badge">Campaigns</span>
+                <span class="badge">Production</span>
+                <span class="badge">VFX</span>
+              </div>
+              
+              <div class="pane-stats">
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">15M+</span>
+                  <span class="pane-stat-label">Campaign Impressions</span>
+                </div>
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">4.8x</span>
+                  <span class="pane-stat-label">Average Ad ROI</span>
+                </div>
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">5+</span>
+                  <span class="pane-stat-label">Industries Served</span>
+                </div>
+              </div>
+
+              <a href="brand-business-marketing.html" class="explore-service-link">Explore this service &rarr;</a>
+            </div>
+
+            <!-- Far Right: Phone cards carousel -->
+            <div class="pane-visuals">
+              <div class="phone-carousel">
+                <div class="phone-carousel-card card-left">
+                  <img src="assets/hero_arc_2.png" alt="Nutty Affair product">
+                  <div class="phone-caption"><span>👁 3.4M</span></div>
+                </div>
+                <div class="phone-carousel-card card-center">
+                  <img src="assets/couple_sofa.png" alt="Business interview video">
+                  <div class="phone-caption"><span>👁 5.1M</span></div>
+                  <span class="reel-icon-floating">🎬</span>
+                </div>
+                <div class="phone-carousel-card card-right">
+                  <img src="assets/hero_arc_4.png" alt="Verde and Oak dining plate">
+                  <div class="phone-caption"><span>👁 2.2M</span></div>
+                </div>
+              </div>
+              <div class="phone-carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inner wrapper for Branding & Graphic Design -->
+          <div class="service-tab-pane" id="service-pane-2">
+            <div class="pane-details">
+              <div class="pane-tag">BRANDING &amp; GRAPHIC DESIGN</div>
+              <h3 class="pane-headline">Visual identity systems<br>built for conversion.</h3>
+              <p class="pane-description">From packaging to high-CTR YouTube thumbnails, we craft visuals that stand out in crowded feeds.</p>
+              
+              <div class="pane-badges">
+                <span class="badge">Brand Systems</span>
+                <span class="badge">Color Palette</span>
+                <span class="badge">Packaging</span>
+                <span class="badge">Thumbnails</span>
+                <span class="badge">Typography</span>
+              </div>
+              
+              <div class="pane-stats">
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">350+</span>
+                  <span class="pane-stat-label">Assets Crafted</span>
+                </div>
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">+12.4%</span>
+                  <span class="pane-stat-label">CTR Average Increase</span>
+                </div>
+                <div class="pane-stat-item">
+                  <span class="pane-stat-num">100%</span>
+                  <span class="pane-stat-label">In-House Design</span>
+                </div>
+              </div>
+
+              <a href="#contact" class="explore-service-link">Explore this service &rarr;</a>
+            </div>
+
+            <!-- Far Right: Phone cards carousel -->
+            <div class="pane-visuals">
+              <div class="phone-carousel">
+                <div class="phone-carousel-card card-left">
+                  <img src="assets/hero_arc_5.png" alt="Modern cover design">
+                  <div class="phone-caption"><span>👁 1.1M</span></div>
+                </div>
+                <div class="phone-carousel-card card-center">
+                  <img src="assets/hero_arc_3.png" alt="Finance graphic design thumbnail">
+                  <div class="phone-caption"><span>👁 2.9M</span></div>
+                  <span class="reel-icon-floating">🎬</span>
+                </div>
+                <div class="phone-carousel-card card-right">
+                  <img src="assets/hero_arc_6.png" alt="Studio Lume interior design sketch">
+                  <div class="phone-caption"><span>👁 1.5M</span></div>
+                </div>
+              </div>
+              <div class="phone-carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Doctor Specialization Highlight Bar -->
+      <div class="specialization-bar" data-reveal>
+        <div class="specialization-info">
+          <div class="spec-tag">NICHE SPECIALIZATION</div>
+          <p class="spec-title">We speak medical &amp; doctor content — compliance-aware scripting, clinic-side shoots, repeatable growth.</p>
+        </div>
+        <div class="specialization-action">
+          <a href="#work" class="btn-circle-arrow-link" aria-label="See doctor case studies">
+            <span class="spec-arrow">&#8594;</span>
+          </a>
+          <span class="spec-action-label"><strong>See case studies</strong><br>Real results from real clients.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDIES ============ -->
+  <section id="work" class="cases-section">
+    <div class="container">
+      <div class="cases-header">
+        <div data-reveal>
+          <div class="section-tag">CASE STUDIES</div>
+          <h2 class="section-title margin-0">What growth looks like in practice</h2>
+        </div>
+        <a data-reveal href="#work" class="cases-all-link">All case studies &rarr;</a>
+      </div>
+      
+      <div class="cases-grid">
+        <!-- Case Study 1 -->
+        <article class="case-card" data-reveal>
+          <div class="case-image-wrapper">
+            <img src="assets/hero_arc_1.png" alt="Dr. Aanya Shah Case Study">
+          </div>
+          <div class="case-content">
+            <div class="case-tag">PERSONAL BRANDING &middot; DOCTOR</div>
+            <div class="case-stat">2.1K &rarr; 418K</div>
+            <div class="case-substat">followers &middot; 16 months &middot; 62M+ views</div>
+            <h3 class="case-title">Dr. Aanya Shah</h3>
+            <p class="case-description">Cosmetic dermatology — from near-zero presence to three 5M+ view videos. Clinic-side shoots &amp; retention-tuned scripting.</p>
+            <a href="#contact" class="case-link">Read case study &rarr;</a>
+          </div>
+        </article>
+        
+        <!-- Case Study 2 -->
+        <article class="case-card" data-reveal data-reveal-delay="110">
+          <div class="case-image-wrapper">
+            <img src="assets/hero_arc_3.png" alt="Rohan Mehta Case Study">
+          </div>
+          <div class="case-content">
+            <div class="case-tag">PERSONAL BRANDING &middot; FINANCE</div>
+            <div class="case-stat">0 &rarr; 276K</div>
+            <div class="case-substat">subscribers &middot; 11 months &middot; 44M+ views</div>
+            <h3 class="case-title">Rohan Mehta</h3>
+            <p class="case-description">Personal finance channel built from scratch, averaging 1.2M+ views per upload with custom high-CTR thumbnail system.</p>
+            <a href="#contact" class="case-link">Read case study &rarr;</a>
+          </div>
+        </article>
+        
+        <!-- Case Study 3 -->
+        <article class="case-card" data-reveal data-reveal-delay="220">
+          <div class="case-image-wrapper">
+            <img src="assets/hero_arc_2.png" alt="Nutty Affair Case Study">
+          </div>
+          <div class="case-content">
+            <div class="case-tag">BRAND MARKETING &middot; CONSUMER</div>
+            <div class="case-stat">5M+</div>
+            <div class="case-substat">campaign reach &middot; 6 months &middot; +42% sales lift</div>
+            <h3 class="case-title">Nutty Affair</h3>
+            <p class="case-description">Hero brand launch campaign for a gourmet nut butter line. Exceeded retail target placement by 150% with premium video ads.</p>
+            <a href="#contact" class="case-link">Read case study &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM SECTION ============ -->
+  <section id="team" class="team-section">
+    <div class="container">
+      <div class="section-tag" data-reveal>OUR TEAM</div>
+      <h2 class="section-title" data-reveal>The in-house team behind the work</h2>
+      
+      <div class="team-grid">
+        <!-- Team Member 1 -->
+        <div class="team-card" data-reveal>
+          <div class="team-photo-wrapper">
+            <img src="assets/team_alex.png" alt="Alex Mercer">
+          </div>
+          <h3 class="team-name">Alex Mercer</h3>
+          <div class="team-role">Founder &amp; Strategy</div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="team-card" data-reveal data-reveal-delay="90">
+          <div class="team-photo-wrapper">
+            <img src="assets/team_marcus.png" alt="Marcus Chen">
+          </div>
+          <h3 class="team-name">Marcus Chen</h3>
+          <div class="team-role">Video &amp; Production</div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="team-card" data-reveal data-reveal-delay="180">
+          <div class="team-photo-wrapper">
+            <img src="assets/team_sarah.png" alt="Sarah Jenkins">
+          </div>
+          <h3 class="team-name">Sarah Jenkins</h3>
+          <div class="team-role">Editing &amp; Post</div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="team-card" data-reveal data-reveal-delay="270">
+          <div class="team-photo-wrapper">
+            <img src="assets/team_elena.png" alt="Elena Rostova">
+          </div>
+          <h3 class="team-name">Elena Rostova</h3>
+          <div class="team-role">Design &amp; Brand</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS SECTION (DARK) ============ -->
+  <section id="process" class="process-section">
+    <div class="container">
+      <div class="section-tag text-orange" data-reveal>HOW IT WORKS</div>
+      <h2 class="section-title text-white" data-reveal>The fastest path from idea to content that performs</h2>
+      
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-step" data-reveal>
+          <div class="step-num">STEP 01</div>
+          <h3 class="step-title">Discovery &amp; strategy</h3>
+          <p class="step-text">A free intro call. We learn your niche, audience, and goals, then build a custom roadmap that fits.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="process-step" data-reveal data-reveal-delay="90">
+          <div class="step-num">STEP 02</div>
+          <h3 class="step-title">Ideation &amp; scripting</h3>
+          <p class="step-text">An ongoing content pipeline — topics and retention-built scripts, fully aligned to the positioning plan.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="process-step" data-reveal data-reveal-delay="180">
+          <div class="step-num">STEP 03</div>
+          <h3 class="step-title">Production, in-house</h3>
+          <p class="step-text">We shoot and edit — pacing, sound effects, grading, and high-converting thumbnails all handled under one roof.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="process-step" data-reveal data-reveal-delay="270">
+          <div class="step-num">STEP 04</div>
+          <h3 class="step-title">Publish &amp; grow</h3>
+          <p class="step-text">Algorithm-aware distribution, multi-platform formatting, and analytics audit, measured against real growth numbers.</p>
+        </div>
+      </div>
+      
+      <a href="#contact" class="btn-large-accent" data-reveal>Start now <span>&#8599;</span></a>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-tag" data-reveal>CLIENT WORDS</div>
+      <h2 class="section-title" data-reveal>We can say a lot — our clients can prove it</h2>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card" data-reveal>
+          <p class="testimonial-quote">&ldquo;Marca didn't just make videos — they understood how to make complex clinical topics feel human and engaging.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-avatar avatar-1"></div>
+            <div>
+              <div class="author-name">Dr. Aanya Shah</div>
+              <div class="author-meta">Cosmetic Dermatology</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card" data-reveal data-reveal-delay="110">
+          <p class="testimonial-quote">&ldquo;The visual assets and video ads Marca delivered for our launch campaign exceeded all benchmarks. They represent production quality at its finest.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-avatar avatar-2"></div>
+            <div>
+              <div class="author-name">Oliver Oak</div>
+              <div class="author-meta">Founder, Verde &amp; Oak</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card" data-reveal data-reveal-delay="220">
+          <p class="testimonial-quote">&ldquo;We went from zero video presence to over 270K subscribers in less than a year. Their end-to-end production script pipeline is flawless.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-avatar avatar-3"></div>
+            <div>
+              <div class="author-name">Rohan Mehta</div>
+              <div class="author-meta">Finance Creator</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ SECTION ============ -->
+  <section id="faq" class="faq-section">
+    <div class="container grid-faq">
+      <div data-reveal>
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title margin-0">Still have<br>questions?</h2>
+      </div>
+      <div class="faq-accordion-group" data-reveal data-reveal-delay="120">
+        <!-- Accordion 1 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            How soon will we see the first results?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Most clients see significant engagement lifts and view count spikes within the first 30 to 60 days of launching their custom strategy. Building a sustainable, compounding and loyal audience typically takes 4 to 6 months of consistent, high-quality publishing.</p>
+          </div>
+        </details>
+        <!-- Accordion 2 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            Do you really produce all the content in-house?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes, absolutely. We do not outsource your brand to freelancers. Our core in-house team handles every stage of your project: discovery &amp; strategy, research, scripting, video recording, editing, sound design, thumbnail art, and channel distribution.</p>
+          </div>
+        </details>
+        <!-- Accordion 3 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            How much of our time does getting started take?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>We respect your busy schedule. Onboarding requires just a single 90-minute strategy session. From there, we handle research, script outlines, and logistics, needing only a 3-hour monthly filming day from you to shoot an entire month of ready-to-publish content.</p>
+          </div>
+        </details>
+        <!-- Accordion 4 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            Which businesses and creators is Marca right for?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>We specialize in founders, medical creators (doctors, clinics), consumer lifestyle brands, and high-end B2B businesses who want to leverage premium video production, branding, and graphic design to build authority and trust.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEW SECTION: OUR REELS PORTFOLIO (DARK) ============ -->
+  <section id="reels" class="reels-portfolio-section">
+    <div class="container">
+      <div class="portfolio-header">
+        <div data-reveal>
+          <div class="section-tag">OUR REELS PORTFOLIO</div>
+          <h2 class="portfolio-title">Ideas that move.<br>Reels that perform.</h2>
+          <p class="portfolio-subtitle">A glimpse of our storytelling, strategy, and scroll-stopping creativity.</p>
+        </div>
+        
+        <div class="portfolio-header-right" data-reveal>
+          <div class="portfolio-stats-bar">
+            <div class="p-stat">
+              <span class="p-icon">&#9658;</span>
+              <div>
+                <strong>120+</strong>
+                <p>Reels Delivered</p>
+              </div>
+            </div>
+            <div class="p-stat">
+              <span class="p-icon">&hearts;</span>
+              <div>
+                <strong>8M+</strong>
+                <p>Views Generated</p>
+              </div>
+            </div>
+            <div class="p-stat">
+              <span class="p-icon">&#8599;</span>
+              <div>
+                <strong>250+</strong>
+                <p>Brands Served</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-view-portfolio">
+            <span>View Full Portfolio</span>
+            <div class="round-arrow-btn">&#8599;</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Carousel Slider Layout -->
+      <div class="portfolio-slider-container" data-reveal data-reveal-delay="100">
+        <!-- Left: custom vertical scrollbar controls -->
+        <div class="slider-scrollbar-control">
+          <button class="scroll-arrow scroll-up" aria-label="Scroll Up">&uarr;</button>
+          <div class="scroll-track">
+            <div class="scroll-handle" id="sliderHandle"></div>
+          </div>
+          <button class="scroll-arrow scroll-down" aria-label="Scroll Down">&darr;</button>
+        </div>
+
+        <!-- Center: the slider list containing straight vertical cards -->
+        <div class="portfolio-cards-slider" id="portfolioSlider">
+          <!-- Card 1 (Food / Beverage) -->
+          <div class="portfolio-card-item" data-category="food">
+            <div class="card-media">
+              <img src="assets/crafted_moments.png" alt="Crafted for Moments coffee">
+              <button class="btn-play-mini" aria-label="Play Reel">&#9654;</button>
+              <div class="card-stats-overlay">
+                <span>👁 1.2M</span>
+                <span>&hearts; 48K</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Crafted for Moments</h4>
+            </div>
+          </div>
+
+          <!-- Card 2 (Healthcare / Skincare) -->
+          <div class="portfolio-card-item" data-category="healthcare">
+            <div class="card-media">
+              <img src="assets/glow_daily.png" alt="Glow Daily skincare">
+              <button class="btn-play-mini" aria-label="Play Reel">&#9654;</button>
+              <div class="card-stats-overlay">
+                <span>👁 860K</span>
+                <span>&hearts; 32K</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Glow Daily.</h4>
+            </div>
+          </div>
+
+          <!-- Card 3 (Featured B2B interview) -->
+          <div class="portfolio-card-item featured" data-category="lifestyle branding">
+            <div class="featured-badge">FEATURED</div>
+            <div class="card-media">
+              <img src="assets/couple_sofa.png" alt="Amazing Traction Video">
+              <button class="btn-play-large" aria-label="Play Reel">&#9654;</button>
+              <div class="card-stats-overlay">
+                <span>👁 2.5M</span>
+                <span>&hearts; 115K</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Amazing Traction But Tiny Market</h4>
+            </div>
+          </div>
+
+          <!-- Card 4 (Lifestyle / Fashion) -->
+          <div class="portfolio-card-item" data-category="fashion lifestyle">
+            <div class="card-media">
+              <img src="assets/built_momentum.png" alt="Built for Momentum running shoe">
+              <button class="btn-play-mini" aria-label="Play Reel">&#9654;</button>
+              <div class="card-stats-overlay">
+                <span>👁 1.7M</span>
+                <span>&hearts; 60K</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Built for Momentum</h4>
+            </div>
+          </div>
+
+          <!-- Card 5 (Real Estate / Interior) -->
+          <div class="portfolio-card-item" data-category="realestate branding">
+            <div class="card-media">
+              <img src="assets/hero_arc_6.png" alt="Redefining Spaces Living Room">
+              <button class="btn-play-mini" aria-label="Play Reel">&#9654;</button>
+              <div class="card-stats-overlay">
+                <span>👁 950K</span>
+                <span>&hearts; 35K</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Redefining Spaces</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Category Filter Buttons -->
+      <nav class="portfolio-filter-nav" aria-label="Portfolio Category Filter" data-reveal>
+        <button class="filter-btn active" data-filter="all">
+          <span class="filter-icon">■</span> All
+        </button>
+        <button class="filter-btn" data-filter="branding">
+          <span class="filter-icon">✿</span> Branding
+        </button>
+        <button class="filter-btn" data-filter="lifestyle">
+          <span class="filter-icon">✦</span> Lifestyle
+        </button>
+        <button class="filter-btn" data-filter="education">
+          <span class="filter-icon">☂</span> Education
+        </button>
+        <button class="filter-btn" data-filter="healthcare">
+          <span class="filter-icon">✚</span> Healthcare
+        </button>
+        <button class="filter-btn" data-filter="fashion">
+          <span class="filter-icon">☠</span> Fashion
+        </button>
+        <button class="filter-btn" data-filter="food">
+          <span class="filter-icon">♨</span> Food
+        </button>
+        <button class="filter-btn" data-filter="realestate">
+          <span class="filter-icon">🏠</span> Real Estate
+        </button>
+        <button class="filter-btn" data-filter="tech">
+          <span class="filter-icon">⚙</span> Tech
+        </button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-card" data-reveal>
+        <h2 class="contact-title">Ready to build something people actually watch?</h2>
+        <p class="contact-subtitle">Tell us about your brand — we'll get back within 24 hours.</p>
+        <div class="contact-actions">
+          <a href="mailto:hello@marcacreatives.com" class="btn-cta-accent">Start a Project <span>&#8599;</span></a>
+          <a href="https://wa.me/123456789" class="btn-cta-outline" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div class="logo">
+          <div class="logo-dot bg-white"></div>
+          <span class="logo-text text-white">marca</span>
+        </div>
+        <p class="footer-about-text">A full-stack content agency building personal brands and business brands from the ground up.</p>
+      </div>
+      <div>
+        <div class="footer-header">SERVICES</div>
+        <div class="footer-links">
+          <a href="#services">Personal Branding</a>
+          <a href="#services">Brand Marketing</a>
+          <a href="#services">Branding &amp; Design</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">COMPANY</div>
+        <div class="footer-links">
+          <a href="#work">Case Studies</a>
+          <a href="about.html">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">SOCIAL</div>
+        <div class="footer-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Marca Creatives. All rights reserved.</span>
+      <span class="footer-adapted">design inspired by marca prototype</span>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger Script Loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
