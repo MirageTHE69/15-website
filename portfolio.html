@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Marca Creatives</title>
+  <meta name="description" content="Explore our portfolio of high-retention reels, YouTube videos, brand films, and shorts. See how we help brands scale with premium content.">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Portfolio | Marca Creatives">
+  <meta property="og:description" content="View our portfolio of premium videos, reels, and brand campaigns.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="motion.css">
+
+  <!-- Custom styles for the Portfolio page -->
+  <style>
+    /* ==========================================================================
+       PORTFOLIO PAGE SPECIFIC STYLES
+       ========================================================================== */
+
+    /* ---- Hero Section ---- */
+    .port-hero {
+      padding: 90px 0 50px;
+      overflow: visible;
+    }
+    .port-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .port-hero-left {
+      max-width: 620px;
+    }
+    .port-hero-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-color);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .port-hero-title {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--text-color);
+      margin-bottom: 20px;
+    }
+    .port-hero-title em {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent-color);
+    }
+    .port-hero-desc {
+      font-size: 16.5px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    /* Delivery stats panel below subtext */
+    .port-hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    .port-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .port-stat-icon-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: rgba(228, 83, 15, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+    .port-stat-icon-circle svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--accent-color);
+      fill: none;
+    }
+    .port-stat-info strong {
+      display: block;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-color);
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+    .port-stat-info span {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* 3D Black Media Player graphic on Right */
+    .port-hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .port-graphic-container {
+      position: relative;
+      width: 360px;
+      height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .port-graphic-dots {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 140px;
+      height: 140px;
+      background-image: radial-gradient(rgba(20, 20, 22, 0.08) 1.5px, transparent 1.5px);
+      background-size: 14px 14px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    /* Background circle */
+    .port-graphic-circle {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(20, 20, 22, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .port-graphic-inner-circle {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fdf6f2 0%, #fae6de 100%);
+      box-shadow: inset 0 0 20px rgba(228,83,15,0.03);
+    }
+    /* Floating 3D media player tile */
+    .port-3d-tile {
+      position: absolute;
+      width: 190px;
+      height: 130px;
+      border-radius: 20px;
+      background: #19191b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.1);
+      z-index: 3;
+      transform: perspective(800px) rotateY(-15deg) rotateX(10deg);
+      animation: floatTile 6s ease-in-out infinite;
+    }
+    @keyframes floatTile {
+      0%, 100% { transform: perspective(800px) rotateY(-15deg) rotateX(10deg) translateY(0); }
+      50% { transform: perspective(800px) rotateY(-18deg) rotateX(12deg) translateY(-8px); }
+    }
+    .port-3d-play-btn {
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-left: 24px solid var(--white);
+      border-bottom: 14px solid transparent;
+      margin-left: 4px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    }
+    
+    /* Strategy meets creativity text & curved arrow */
+    .port-pointer-label {
+      position: absolute;
+      bottom: 20px;
+      left: -20px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-color);
+      width: 90px;
+      line-height: 1.3;
+      z-index: 4;
+      text-align: right;
+    }
+    .port-pointer-arrow {
+      position: absolute;
+      bottom: 12px;
+      left: 60px;
+      width: 70px;
+      height: 40px;
+      z-index: 4;
+      transform: rotate(10deg);
+    }
+
+    /* ---- Filter Bar ---- */
+    .port-filter-bar {
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .port-filter-pills {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .port-filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 40px;
+      padding: 10px 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-color);
+      cursor: pointer;
+      transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+      user-select: none;
+    }
+    .port-filter-pill:hover {
+      background-color: #fdfcf9;
+      border-color: #bebcb4;
+    }
+    .port-filter-pill svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--muted-text);
+      fill: none;
+      transition: stroke var(--transition-fast);
+    }
+    .port-filter-pill:hover svg {
+      stroke: var(--text-color);
+    }
+    .port-filter-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      display: inline-block;
+    }
+
+    /* Active filter pill */
+    .port-filter-pill.active {
+      background-color: var(--text-color);
+      color: var(--white);
+      border-color: var(--text-color);
+    }
+    .port-filter-pill.active svg {
+      stroke: var(--white);
+    }
+    
+    /* Dropdown Filter block */
+    .port-filter-dropdown-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 40px;
+      padding: 10px 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-color);
+      cursor: pointer;
+      user-select: none;
+    }
+    .port-filter-dropdown-btn svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+    }
+
+    /* ---- Portfolio 3-Column Grid ---- */
+    .port-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 30px;
+      padding-bottom: 50px;
+    }
+    .port-item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .port-thumbnail-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+    }
+    .port-thumbnail-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .port-thumbnail-wrapper:hover .port-thumbnail-img {
+      transform: scale(1.05);
+    }
+
+    /* Badges & Overlay */
+    .port-duration-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(20, 20, 22, 0.85);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 6px;
+      z-index: 3;
+      letter-spacing: 0.05em;
+    }
+    .port-type-badge {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(20, 20, 22, 0.85);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 30px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .port-type-badge svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--white);
+      fill: none;
+    }
+    
+    /* Overlay hover effect + play icon */
+    .port-overlay-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(20, 20, 22, 0.35);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+    .port-thumbnail-wrapper:hover .port-overlay-layer {
+      opacity: 1;
+    }
+    .port-play-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+    }
+    .port-thumbnail-wrapper:hover .port-play-circle {
+      transform: scale(1);
+    }
+    .port-play-circle svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--text-color);
+      margin-left: 2px;
+    }
+
+    /* Embedded card graphic text inside image */
+    .port-embed-text-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .port-embed-tagline {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      max-width: 200px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .port-embed-tagline em {
+      color: var(--accent-color);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+    }
+
+    /* Card Metadata row below image */
+    .port-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .port-card-meta-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .port-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-color);
+      letter-spacing: -0.01em;
+    }
+    .port-card-client {
+      font-size: 13px;
+      color: var(--muted-text);
+      font-weight: 500;
+    }
+    .port-card-arrow-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+      transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .port-item:hover .port-card-arrow-circle {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: var(--white);
+    }
+
+    /* ---- Load More Button ---- */
+    .port-load-more-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 90px;
+    }
+    .port-load-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 40px;
+      padding: 12px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-color);
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast);
+      user-select: none;
+    }
+    .port-load-more-btn:hover {
+      background: #fdfcf9;
+      border-color: #bebcb4;
+    }
+
+    /* ---- Beige CTA Banner ---- */
+    .port-cta-banner {
+      background: #fcf6f0;
+      border: 1px solid rgba(228, 83, 15, 0.12);
+      border-radius: 28px;
+      padding: 64px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 120px;
+    }
+    .port-cta-left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .port-cta-badge {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+    .port-cta-badge svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--accent-color);
+      fill: none;
+    }
+    .port-cta-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text-color);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+    .port-cta-title em {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      color: var(--accent-color);
+      font-weight: 500;
+    }
+    .port-cta-desc {
+      font-size: 15px;
+      color: var(--muted-text);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .port-cta-btn {
+      background: var(--text-color);
+      color: var(--white);
+      border-radius: 40px;
+      padding: 16px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition-fast), background-color var(--transition-fast);
+      flex-shrink: 0;
+    }
+    .port-cta-btn:hover {
+      transform: translateY(-2px);
+      background-color: var(--accent-color);
+      color: var(--white);
+    }
+    .port-cta-btn svg {
+      transition: transform var(--transition-fast);
+    }
+    .port-cta-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ---- Responsive Design ---- */
+    @media (max-width: 991px) {
+      .port-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+      }
+      .port-hero-left {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .port-hero-stats {
+        justify-content: center;
+      }
+      .port-hero-right {
+        height: 300px;
+      }
+      .port-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .port-cta-banner {
+        flex-direction: column;
+        padding: 48px;
+        text-align: center;
+      }
+      .port-cta-left {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 768px) {
+      .port-hero-title {
+        font-size: 46px;
+      }
+      .port-hero-stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        max-width: fit-content;
+        margin: 0 auto;
+      }
+      .port-grid {
+        grid-template-columns: 1fr;
+      }
+      .port-filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .port-cta-title {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ STICKY NAV ============ -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-text">MARCO</span>
+        <div class="logo-dot"></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#studio">Platform Guide</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn-primary">Start a Project</a>
+        <a href="contact.html" class="btn-arrow" aria-label="Contact Us">&#8599;</a>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="port-hero">
+    <div class="container port-hero-grid">
+      <div class="port-hero-left" data-reveal>
+        <span class="port-hero-tag">OUR WORK</span>
+        <h1 class="port-hero-title">
+          Stories we’ve brought <em>to life.</em>
+        </h1>
+        <p class="port-hero-desc">
+          A collection of reels and videos we’ve created to help brands connect, engage and grow.
+        </p>
+
+        <!-- Delivery stats panel -->
+        <div class="port-hero-stats">
+          <div class="port-stat-item">
+            <div class="port-stat-icon-circle">
+              <!-- Play icon -->
+              <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+            <div class="port-stat-info">
+              <strong>150+</strong>
+              <span>Videos Delivered</span>
+            </div>
+          </div>
+
+          <div class="port-stat-item">
+            <div class="port-stat-icon-circle">
+              <!-- Calendar or briefcase icon -->
+              <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="port-stat-info">
+              <strong>75+</strong>
+              <span>Brands Empowered</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="port-hero-right" data-reveal data-reveal-delay="100">
+        <div class="port-graphic-container">
+          <!-- Dots background pattern -->
+          <div class="port-graphic-dots"></div>
+          <!-- Circles -->
+          <div class="port-graphic-circle">
+            <div class="port-graphic-inner-circle"></div>
+          </div>
+          <!-- 3D Black Media Player tile -->
+          <div class="port-3d-tile">
+            <div class="port-3d-play-btn"></div>
+          </div>
+
+          <!-- Pointer & arrow annotations -->
+          <span class="port-pointer-label">Strategy meets creativity.</span>
+          <div class="port-pointer-arrow">
+            <!-- Orange curved arrow pointing up-right -->
+            <svg width="100%" height="100%" viewBox="0 0 80 50" fill="none">
+              <path d="M5 45 Q 35 48 55 18 T 72 5" stroke="#e4530f" stroke-width="2" stroke-linecap="round" fill="none"></path>
+              <polyline points="63 7 73 5 70 15" stroke="#e4530f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FILTER BAR ============ -->
+  <section class="container" data-reveal>
+    <div class="port-filter-bar">
+      
+      <!-- Left: pills -->
+      <div class="port-filter-pills">
+        <div class="port-filter-pill active" data-filter="all">
+          <span>All Work</span>
+          <span class="port-filter-dot"></span>
+        </div>
+
+        <div class="port-filter-pill" data-filter="reels">
+          <!-- Camera icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <span>Reels</span>
+        </div>
+
+        <div class="port-filter-pill" data-filter="youtube">
+          <!-- Play icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>YouTube Videos</span>
+        </div>
+
+        <div class="port-filter-pill" data-filter="films">
+          <!-- Film icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+            <line x1="7" y1="2" x2="7" y2="22"></line>
+            <line x1="17" y1="2" x2="17" y2="22"></line>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <line x1="2" y1="7" x2="7" y2="7"></line>
+            <line x1="2" y1="17" x2="7" y2="17"></line>
+            <line x1="17" y1="17" x2="22" y2="17"></line>
+            <line x1="17" y1="7" x2="22" y2="7"></line>
+          </svg>
+          <span>Brand Films</span>
+        </div>
+
+        <div class="port-filter-pill" data-filter="shorts">
+          <!-- Lightning bolt icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>Shorts</span>
+        </div>
+      </div>
+
+      <!-- Right: filter dropdown button -->
+      <div class="port-filter-dropdown-btn">
+        <!-- Funnel icon -->
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        <span>Filter</span>
+        <span>&darr;</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO GRID ============ -->
+  <section class="container">
+    <div class="port-grid">
+      
+      <!-- Card 1 (Glow Naturally) -->
+      <div class="port-item" data-category="reels" data-reveal>
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">0:26</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+            <span>Reel</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/hero_arc_2.png" alt="Glow Naturally Campaign Skincare Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline">GLOW NATURALLY</h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Glow Naturally Campaign</strong>
+            <span class="port-card-client">Client: Pure Elements</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+      <!-- Card 2 (Stronger Everyday) -->
+      <div class="port-item" data-category="youtube" data-reveal data-reveal-delay="80">
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">1:15</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>YouTube Video</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/casestudy_execution.png" alt="Stronger Everyday Brand Film Gym Workout Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline">STRONGER EVERYDAY.</h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Stronger Everyday - Brand Film</strong>
+            <span class="port-card-client">Client: FitFuel</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+      <!-- Card 3 (Minimal Timeless Yours) -->
+      <div class="port-item" data-category="reels" data-reveal data-reveal-delay="160">
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">0:22</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+            <span>Reel</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/casestudy_strategy.png" alt="Minimal Timeless Yours Chair Furniture Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline">MINIMAL. TIMELESS. <em>YOURS.</em></h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Minimal. Timeless. Yours.</strong>
+            <span class="port-card-client">Client: Casa Modern</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+      <!-- Card 4 (Manage Smarter) -->
+      <div class="port-item" data-category="reels" data-reveal>
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">0:35</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+            <span>Reel</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/hero_arc_1.png" alt="Manage Smarter Mobile App Screen Overview Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline" style="font-size: 22px;">Manage Smarter, Not Harder.</h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Manage Smarter App Promo</strong>
+            <span class="port-card-client">Client: Taskly</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+      <!-- Card 5 (Taste That Hits Different) -->
+      <div class="port-item" data-category="shorts" data-reveal data-reveal-delay="80">
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">0:30</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <span>Shorts</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/casestudy_results.png" alt="Taste That Hits Different Gourmet Burger Food Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline">TASTE THAT HITS <em>DIFFERENT</em></h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Taste That Hits Different</strong>
+            <span class="port-card-client">Client: Burger Barn</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+      <!-- Card 6 (Adventure Awaits) -->
+      <div class="port-item" data-category="youtube" data-reveal data-reveal-delay="160">
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">2:05</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>YouTube Video</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/casestudy_strategy.png" alt="Adventure Awaits Mountains Hiker Travel Film Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline">ADVENTURE AWAITS <span style="font-size: 14px; display: block; font-weight: 500; margin-top: 8px;">Go, Explore, Live.</span></h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Adventure Awaits – Travel Film</strong>
+            <span class="port-card-client">Client: Wanderly</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+      <!-- Card 7 (Pure Ingredients) -->
+      <div class="port-item" data-category="reels" data-reveal>
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">0:25</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+            <span>Reel</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/hero_arc_2.png" alt="Pure Ingredients Real Results Cosmetics Bottle Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline" style="font-size: 22px;">Pure Ingredients. Real Results.</h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Pure Ingredients. Real Results.</strong>
+            <span class="port-card-client">Client: Pure Elements</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+      <!-- Card 8 (Next Gen Tech) -->
+      <div class="port-item" data-category="youtube" data-reveal data-reveal-delay="80">
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">0:45</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>YouTube Video</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/casestudy_execution.png" alt="Next Gen Tech Smartwatch Gadget Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline">NEXT GEN TECH <em>FOR YOU</em></h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Next Gen Tech for You</strong>
+            <span class="port-card-client">Client: TechNova</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+      <!-- Card 9 (Live Your Style) -->
+      <div class="port-item" data-category="reels" data-reveal data-reveal-delay="160">
+        <div class="port-thumbnail-wrapper">
+          <div class="port-duration-badge">0:20</div>
+          <!-- Type badge -->
+          <div class="port-type-badge">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+            <span>Reel</span>
+          </div>
+          <!-- Image -->
+          <img src="assets/hero_arc_1.png" alt="Live Your Style Sunglasses Woman Model Fashion Thumbnail" class="port-thumbnail-img">
+          <!-- Text graphic on image -->
+          <div class="port-embed-text-container">
+            <h4 class="port-embed-tagline">LIVE YOUR <em>STYLE</em></h4>
+          </div>
+          <!-- Overlay layer on hover -->
+          <div class="port-overlay-layer">
+            <div class="port-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card Metadata below -->
+        <div class="port-card-meta">
+          <div class="port-card-meta-left">
+            <strong class="port-card-title">Live Your Style</strong>
+            <span class="port-card-client">Client: Voguea</span>
+          </div>
+          <div class="port-card-arrow-circle">&rarr;</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ LOAD MORE BUTTON ============ -->
+  <div class="port-load-more-container" data-reveal>
+    <button class="port-load-more-btn">
+      <span>Load More Work</span>
+      <span>&darr;</span>
+    </button>
+  </div>
+
+  <!-- ============ BEIGE CTA BANNER ============ -->
+  <section class="container">
+    <div class="port-cta-banner" data-reveal>
+      <div class="port-cta-left">
+        <div class="port-cta-badge">
+          <!-- Paper plane icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </div>
+        <div class="port-cta-texts">
+          <h4 class="port-cta-title">Have a <em>project</em> in mind?</h4>
+          <p class="port-cta-desc">Let’s create something amazing together.</p>
+        </div>
+      </div>
+      <a href="contact.html" class="port-cta-btn">
+        <span>Let's Talk</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <span class="logo-text text-white">MARCO</span>
+          <div class="logo-dot"></div>
+        </a>
+        <p class="footer-about-text">A full-stack content agency building personal brands and business brands from the ground up.</p>
+      </div>
+      <div>
+        <div class="footer-header">SERVICES</div>
+        <div class="footer-links">
+          <a href="personal-branding.html">Personal Branding</a>
+          <a href="brand-business-marketing.html">Brand Marketing</a>
+          <a href="services.html">Branding &amp; Design</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">COMPANY</div>
+        <div class="footer-links">
+          <a href="work.html">Case Studies</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">SOCIAL</div>
+        <div class="footer-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Marca Creatives. All rights reserved.</span>
+      <span class="footer-adapted">design inspired by marca prototype</span>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger Script Loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+  <script src="motion.js"></script>
+
+  <!-- Interactive Client-side Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterPills = document.querySelectorAll('.port-filter-pill');
+      const portItems = document.querySelectorAll('.port-item');
+
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          // Toggle active pill styling
+          filterPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          const category = pill.getAttribute('data-filter');
+
+          // Filter grid cards
+          portItems.forEach(item => {
+            const itemCat = item.getAttribute('data-category');
+
+            if (category === 'all' || itemCat === category) {
+              // Show item
+              item.style.display = 'flex';
+              // Trigger slight opacity scale animation via JS
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.96)';
+              setTimeout(() => {
+                item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              }, 50);
+            } else {
+              // Hide item
+              item.style.display = 'none';
+            }
+          });
+
+          // Refresh ScrollTrigger to adjust layout heights
+          if (typeof ScrollTrigger !== 'undefined') {
+            ScrollTrigger.refresh();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

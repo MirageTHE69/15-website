@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Studies | Marca Creatives</title>
+  <meta name="description" content="Explore our client case studies and see how we partner with brands to turn challenges into growth stories that create real impact.">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Case Studies | Marca Creatives">
+  <meta property="og:description" content="Discover our proven results across personal branding, marketing campaigns, and B2B business branding.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="motion.css">
+
+  <!-- Inline style overrides & Custom styling for the work/case-studies page -->
+  <style>
+    /* ==========================================================================
+       CASE STUDIES ARCHIVE PAGE SPECIFIC STYLES
+       ========================================================================== */
+
+    /* ---- Let's Talk Button in Header ---- */
+    .nav-btn-lets-talk {
+      display: inline-flex;
+      align-items: center;
+      background: var(--text-color);
+      color: var(--bg-color) !important;
+      padding: 10px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      gap: 10px;
+      transition: transform var(--transition-fast), background-color var(--transition-fast);
+    }
+    .nav-btn-lets-talk:hover {
+      transform: translateY(-2px);
+      background: var(--accent-color);
+      color: var(--white) !important;
+    }
+    .btn-arrow-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.15);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: 14px;
+      line-height: 1;
+      transition: background-color var(--transition-fast);
+    }
+    .nav-btn-lets-talk:hover .btn-arrow-circle {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* ---- Hero Section ---- */
+    .cs-hero {
+      padding: 100px 0 80px;
+      overflow: hidden;
+    }
+    .cs-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .cs-hero-left {
+      max-width: 620px;
+    }
+    .cs-hero-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-color);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .cs-hero-title {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--text-color);
+      margin-bottom: 28px;
+    }
+    .cs-hero-title em {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent-color);
+    }
+    .cs-hero-desc {
+      font-size: 18px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .cs-hero-cta-link {
+      display: inline-flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-color);
+      border-bottom: 1.5px solid var(--text-color);
+      padding-bottom: 4px;
+      gap: 8px;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .cs-hero-cta-link:hover {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+    .cs-hero-cta-link .arrow-orange {
+      color: var(--accent-color);
+      transition: transform var(--transition-fast);
+    }
+    .cs-hero-cta-link:hover .arrow-orange {
+      transform: translateX(4px);
+    }
+
+    /* ---- Concentric Circles Animation Graphics ---- */
+    .cs-hero-right {
+      position: relative;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cs-orbit-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .cs-circle {
+      position: absolute;
+      border: 1px dashed var(--border-color);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .cs-circle-1 {
+      width: 280px;
+      height: 280px;
+    }
+    .cs-circle-2 {
+      width: 440px;
+      height: 440px;
+    }
+    
+    /* Center Arrow Badge */
+    .cs-center-badge {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(228, 83, 15, 0.35);
+      z-index: 5;
+    }
+    .cs-center-badge svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--white);
+    }
+
+    /* Floating Cards */
+    .cs-orbit-card {
+      position: absolute;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: var(--shadow-premium);
+      border: 1px solid rgba(20, 20, 22, 0.06);
+      width: 190px;
+      padding: 10px;
+      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      z-index: 3;
+    }
+    .cs-orbit-card:hover {
+      transform: scale(1.04) translateY(-5px);
+      box-shadow: var(--shadow-premium-hover);
+    }
+    .cs-orbit-card img {
+      border-radius: 12px;
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      display: block;
+    }
+    .cs-orbit-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #f7f6f4;
+      border-radius: 30px;
+      padding: 4px 10px 4px 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 8px;
+      width: fit-content;
+      border: 1px solid rgba(20, 20, 22, 0.04);
+    }
+    .cs-orbit-icon-circle {
+      width: 20px;
+      height: 20px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Positioning Cards */
+    .orbit-strategy {
+      top: 10px;
+      right: 25px;
+    }
+    .orbit-execution {
+      bottom: 25px;
+      left: 10px;
+    }
+    .orbit-results {
+      bottom: 60px;
+      right: -10px;
+    }
+
+    /* ---- Filter Bar ---- */
+    .cs-filter-bar {
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 0;
+      background-color: #f6f5f2;
+      position: sticky;
+      top: 73px;
+      z-index: 40;
+    }
+    .cs-filter-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .cs-filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    /* Filter Pill Styling */
+    .cs-filter-btn {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      padding: 10px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 13.5px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .cs-filter-btn:hover {
+      background-color: #f7f6f4;
+      border-color: #bebcb4;
+    }
+    .pill-icon {
+      color: var(--muted-text);
+      opacity: 0.8;
+      transition: color var(--transition-fast);
+    }
+    .cs-filter-btn:hover .pill-icon {
+      color: var(--text-color);
+    }
+
+    /* Active Filter Pill Styling */
+    .cs-filter-btn.active {
+      background: var(--text-color);
+      color: var(--white);
+      border-color: var(--text-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    .cs-filter-btn.active .pill-icon {
+      color: var(--white);
+      opacity: 1;
+    }
+    .dot-indicator {
+      color: var(--accent-color);
+      font-size: 14px;
+      margin-left: 2px;
+    }
+
+    /* Dropdown Filter Pill Styling */
+    .cs-filter-dropdown-btn {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      padding: 10px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 13.5px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .cs-filter-dropdown-btn:hover {
+      background-color: #f7f6f4;
+      border-color: #bebcb4;
+    }
+    .cs-filter-dropdown-btn .arrow-down {
+      color: var(--muted-text);
+      transition: transform var(--transition-fast);
+    }
+    .cs-filter-dropdown-btn:hover .arrow-down {
+      transform: translateY(1px);
+    }
+
+    /* ---- Case Studies Cards Grid ---- */
+    .cs-grid {
+      padding: 80px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .cs-card-wrapper {
+      background: var(--white);
+      border-radius: 28px;
+      border: 1px solid rgba(20, 20, 22, 0.08);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+      opacity: 1;
+      transform: scale(1);
+    }
+    .cs-card-wrapper.hidden-card {
+      display: none !important;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .cs-card-wrapper:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-premium);
+    }
+
+    /* Card Image Column */
+    .cs-card-image-col {
+      position: relative;
+      overflow: hidden;
+      min-height: 440px;
+      background-color: #eae8e3;
+    }
+    .cs-card-image-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cs-card-wrapper:hover .cs-card-image-col img {
+      transform: scale(1.03);
+    }
+
+    /* Play Video Overlay Button */
+    .btn-play-overlay {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      background: var(--white);
+      color: var(--text-color);
+      border-radius: 50px;
+      padding: 8px 18px 8px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .btn-play-overlay:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+    .btn-play-overlay-circle {
+      width: 26px;
+      height: 26px;
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 10px;
+      padding-left: 2px;
+    }
+
+    /* Card Info Column */
+    .cs-card-info-col {
+      padding: 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cs-card-header-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .cs-card-category {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-color);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .cs-card-num-box {
+      border: 1px solid var(--border-color);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted-text);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background: #fdfdfd;
+    }
+    .cs-card-title {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-color);
+      margin-bottom: 8px;
+    }
+    .cs-card-subtitle {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--muted-text);
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+    .cs-card-desc {
+      font-size: 15px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .cs-card-divider {
+      height: 1px;
+      background-color: var(--border-color);
+      width: 100%;
+      margin-bottom: 28px;
+    }
+
+    /* Card Stats Grid */
+    .cs-card-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+    .cs-stat-item-col h5 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-color);
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+    .cs-stat-item-col p {
+      font-size: 12px;
+      color: var(--muted-text);
+      line-height: 1.3;
+      font-weight: 500;
+    }
+    .stat-arrow-orange {
+      color: var(--accent-color);
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0 2px;
+    }
+
+    /* Card CTA Link */
+    .cs-card-cta-link {
+      display: inline-flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-color);
+      gap: 6px;
+      width: fit-content;
+      transition: color var(--transition-fast);
+    }
+    .cs-card-cta-link:hover {
+      color: var(--accent-color);
+    }
+    .cs-card-cta-link svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--accent-color);
+      transition: transform var(--transition-fast);
+    }
+    .cs-card-cta-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ---- Card 02: Dark Dashboard Widget Styling ---- */
+    .dark-chart-col {
+      background: linear-gradient(135deg, #1d1d20 0%, #111113 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      min-height: 440px;
+    }
+    .dark-chart-widget {
+      width: 100%;
+      max-width: 440px;
+      background: rgba(30, 30, 34, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 2;
+    }
+    .widget-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+    .widget-title {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--accent-color);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+      background: linear-gradient(90deg, #ff7a3b 0%, #e4530f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .widget-years {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.3);
+      font-family: var(--font-mono);
+      margin-bottom: 24px;
+    }
+    
+    .widget-chart-area {
+      position: relative;
+      height: 160px;
+      width: 100%;
+    }
+    .chart-grid-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.07);
+    }
+    .chart-grid-line.line-1 { top: 0; }
+    .chart-grid-line.line-2 { top: 50px; }
+    .chart-grid-line.line-3 { top: 100px; }
+    
+    .chart-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+    .chart-line {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawLine 2s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    }
+    @keyframes drawLine {
+      to { stroke-dashoffset: 0; }
+    }
+    
+    .floating-coin {
+      position: absolute;
+      top: -15px;
+      right: 30px;
+      animation: floatCoin 4s ease-in-out infinite;
+      z-index: 5;
+    }
+    @keyframes floatCoin {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(15deg); }
+    }
+
+    /* ---- Pagination Section ---- */
+    .cs-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
+    .cs-page-arrow {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--text-color);
+      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .cs-page-arrow:hover {
+      background: var(--text-color);
+      color: var(--white);
+      border-color: var(--text-color);
+    }
+    .cs-page-arrow.arrow-right {
+      color: var(--accent-color);
+      border-color: #bebcb4;
+    }
+    .cs-page-arrow.arrow-right:hover {
+      background: var(--accent-color);
+      border-color: var(--accent-color);
+      color: var(--white);
+    }
+    .cs-page-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--muted-text);
+      transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+    .cs-page-num:hover {
+      color: var(--text-color);
+    }
+    .cs-page-num.active {
+      background-color: var(--text-color);
+      color: var(--white);
+    }
+
+    /* ---- Custom CTA Banner ---- */
+    .cs-cta-banner {
+      background: #fdfcf9;
+      border-radius: 28px;
+      padding: 64px 80px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 120px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .cs-cta-left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .cs-cta-badge-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: rgba(228, 83, 15, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+    .cs-cta-badge-circle svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--accent-color);
+      fill: none;
+    }
+    .cs-cta-title-main {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--text-color);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+    .cs-cta-title-main em {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent-color);
+    }
+    .cs-cta-desc {
+      font-size: 15px;
+      color: var(--muted-text);
+      font-weight: 500;
+    }
+    .cs-cta-btn-start {
+      background: var(--text-color);
+      color: var(--white);
+      border-radius: 40px;
+      padding: 16px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      flex-shrink: 0;
+    }
+    .cs-cta-btn-start:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+      color: var(--white);
+    }
+    .cs-cta-btn-start svg {
+      transition: transform var(--transition-fast);
+    }
+    .cs-cta-btn-start:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ---- Responsive Styling ---- */
+    @media (max-width: 991px) {
+      .cs-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .cs-hero-left {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .cs-hero-right {
+        height: 380px;
+      }
+      .cs-circle-2 {
+        width: 360px;
+        height: 360px;
+      }
+      .cs-orbit-card {
+        width: 160px;
+      }
+      .orbit-strategy {
+        right: 0px;
+      }
+      .orbit-execution {
+        left: 0px;
+      }
+      .orbit-results {
+        right: -10px;
+      }
+      .cs-card-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .cs-card-image-col {
+        min-height: 300px;
+      }
+      .cs-card-info-col {
+        padding: 40px;
+      }
+      .cs-cta-banner {
+        flex-direction: column;
+        padding: 48px;
+        text-align: center;
+      }
+      .cs-cta-left {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 768px) {
+      .cs-hero-title {
+        font-size: 46px;
+      }
+      .cs-filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .cs-filter-dropdown-btn {
+        align-self: flex-end;
+      }
+      .cs-card-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ STICKY NAV ============ -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-text">MARCO</span>
+        <div class="logo-dot"></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#studio">Platform Guide</a>
+        <a href="services.html">Services</a>
+        <a href="work.html" class="active">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn-primary">Start a Project</a>
+        <a href="contact.html" class="btn-arrow" aria-label="Contact Us">&#8599;</a>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="cs-hero">
+    <div class="container cs-hero-grid">
+      <div class="cs-hero-left" data-reveal>
+        <span class="cs-hero-tag">CASE STUDIES</span>
+        <h1 class="cs-hero-title">
+          Real Challenges. Thoughtful Solutions. <em>Proven Results.</em>
+        </h1>
+        <p class="cs-hero-desc">
+          Explore how we partner with brands to turn challenges into growth stories that create real impact.
+        </p>
+        <a href="contact.html" class="cs-hero-cta-link">
+          <span>Have a project in mind? Let's talk</span>
+          <span class="arrow-orange">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="cs-hero-right" data-reveal data-reveal-delay="100">
+        <!-- Concentric dashed circles -->
+        <div class="cs-orbit-bg">
+          <div class="cs-circle cs-circle-1"></div>
+          <div class="cs-circle cs-circle-2"></div>
+        </div>
+
+        <!-- Center badge -->
+        <div class="cs-center-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </div>
+
+        <!-- Strategy floating card -->
+        <div class="cs-orbit-card orbit-strategy">
+          <div class="cs-orbit-badge">
+            <span class="cs-orbit-icon-circle">💡</span>
+            <span>Strategy</span>
+          </div>
+          <img src="assets/casestudy_strategy.png" alt="Strategy Planning Meeting">
+        </div>
+
+        <!-- Execution floating card -->
+        <div class="cs-orbit-card orbit-execution">
+          <div class="cs-orbit-badge">
+            <span class="cs-orbit-icon-circle">⚙️</span>
+            <span>Execution</span>
+          </div>
+          <img src="assets/casestudy_execution.png" alt="Execution Laptop Work">
+        </div>
+
+        <!-- Results floating card -->
+        <div class="cs-orbit-card orbit-results">
+          <div class="cs-orbit-badge">
+            <span class="cs-orbit-icon-circle">📊</span>
+            <span>Results</span>
+          </div>
+          <img src="assets/casestudy_results.png" alt="Results Graph Trends">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FILTER BAR ============ -->
+  <section class="cs-filter-bar">
+    <div class="container cs-filter-container">
+      <div class="cs-filter-pills">
+        <button class="cs-filter-btn active" data-filter="all">All Case Studies <span class="dot-indicator">•</span></button>
+        <button class="cs-filter-btn" data-filter="branding">
+          <svg class="pill-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+          </svg>
+          Branding
+        </button>
+        <button class="cs-filter-btn" data-filter="marketing">
+          <svg class="pill-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="22"></line>
+          </svg>
+          Marketing
+        </button>
+        <button class="cs-filter-btn" data-filter="design">
+          <svg class="pill-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+          </svg>
+          Design
+        </button>
+        <button class="cs-filter-btn" data-filter="growth">
+          <svg class="pill-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+          Growth
+        </button>
+        <button class="cs-filter-btn" data-filter="web-development">
+          <svg class="pill-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          Web Development
+        </button>
+      </div>
+
+      <button class="cs-filter-dropdown-btn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filter
+        <svg class="arrow-down" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDIES LIST GRID ============ -->
+  <section class="container">
+    <div class="cs-grid" id="csGrid">
+
+      <!-- CARD 01: Nutty Affair (CONSUMER MARKETING) -->
+      <div class="cs-card-wrapper" data-category="marketing branding design" data-reveal>
+        <div class="cs-card-image-col">
+          <img src="assets/hero_arc_2.png" alt="Nutty Affair Almond Butter packaging design">
+          <button class="btn-play-overlay">
+            <span class="btn-play-overlay-circle">&#9654;</span>
+            <span>View Case Study</span>
+          </button>
+        </div>
+        <div class="cs-card-info-col">
+          <div class="cs-card-header-meta">
+            <span class="cs-card-category">CONSUMER MARKETING</span>
+            <div class="cs-card-num-box">01</div>
+          </div>
+          <h2 class="cs-card-title">Nutty Affair</h2>
+          <h3 class="cs-card-subtitle">Building a Premium Brand That Stands Out</h3>
+          <p class="cs-card-desc">
+            We helped Nutty Affair launch as a premium gourmet nut butter brand with a powerful identity and performance marketing strategy.
+          </p>
+          <div class="cs-card-divider"></div>
+          <div class="cs-card-stats-grid">
+            <div class="cs-stat-item-col">
+              <h5>5M+</h5>
+              <p>Campaign Reach</p>
+            </div>
+            <div class="cs-stat-item-col">
+              <h5>+150%</h5>
+              <p>Increase in Sales</p>
+            </div>
+            <div class="cs-stat-item-col">
+              <h5>+42%</h5>
+              <p>ROAS Growth</p>
+            </div>
+          </div>
+          <a href="case-study-nutty.html" class="cs-card-cta-link">
+            <span>View full case study</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 02: Rohan Mehta (FINANCE BRANDING) -->
+      <div class="cs-card-wrapper" data-category="branding growth design" data-reveal>
+        <div class="cs-card-info-col">
+          <div class="cs-card-header-meta">
+            <span class="cs-card-category">FINANCE BRANDING</span>
+            <div class="cs-card-num-box">02</div>
+          </div>
+          <h2 class="cs-card-title">Rohan Mehta</h2>
+          <h3 class="cs-card-subtitle">Scaling a Personal Finance Brand to New Heights</h3>
+          <p class="cs-card-desc">
+            From scratch to scale — we built a strong personal brand, optimized content strategy, and grew a loyal community.
+          </p>
+          <div class="cs-card-divider"></div>
+          <div class="cs-card-stats-grid">
+            <div class="cs-stat-item-col">
+              <h5>276K</h5>
+              <p>Subscribers Gained</p>
+            </div>
+            <div class="cs-stat-item-col">
+              <h5>44M+</h5>
+              <p>Total Views</p>
+            </div>
+            <div class="cs-stat-item-col">
+              <h5>315%</h5>
+              <p>Growth in Reach</p>
+            </div>
+          </div>
+          <a href="case-study-rohan.html" class="cs-card-cta-link">
+            <span>View full case study</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        <div class="dark-chart-col">
+          <!-- Interactive asset growth widget (HTML + SVG) -->
+          <div class="dark-chart-widget">
+            <div class="widget-tag">TOTAL ASSET GROWTH</div>
+            <div class="widget-title">+315%</div>
+            <div class="widget-years">2022 — 2027</div>
+            <div class="widget-chart-area">
+              <div class="chart-grid-line line-1"></div>
+              <div class="chart-grid-line line-2"></div>
+              <div class="chart-grid-line line-3"></div>
+              <div class="floating-coin">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="#e4530f" fill-opacity="0.2" stroke="#e4530f" stroke-width="1.5"></circle>
+                  <circle cx="12" cy="12" r="7" fill="url(#coinGrad)" stroke="#e4530f" stroke-width="1"></circle>
+                  <path d="M12 8v8M10 10h4M10 14h4" stroke="white" stroke-width="1" stroke-linecap="round"></path>
+                  <defs>
+                    <linearGradient id="coinGrad" x1="12" y1="5" x2="12" y2="19" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#ff9d6c"></stop>
+                      <stop offset="1" stop-color="#e4530f"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <svg class="chart-svg" viewBox="0 0 400 200" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#e4530f" stop-opacity="0.4"></stop>
+                    <stop offset="100%" stop-color="#e4530f" stop-opacity="0.05"></stop>
+                  </linearGradient>
+                  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+                    <feMerge>
+                      <feMergeNode in="blur"></feMergeNode>
+                      <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <path d="M 0 170 Q 75 145 150 110 T 300 65 L 400 35 L 400 200 L 0 200 Z" fill="url(#chartGrad)"></path>
+                <path class="chart-line" d="M 0 170 Q 75 145 150 110 T 300 65 L 400 35" fill="none" stroke="#e4530f" stroke-width="4" filter="url(#glow)"></path>
+                <circle cx="75" cy="155" r="4" fill="#ffffff" stroke="#e4530f" stroke-width="3"></circle>
+                <circle cx="150" cy="110" r="4" fill="#ffffff" stroke="#e4530f" stroke-width="3"></circle>
+                <circle cx="225" cy="90" r="4" fill="#ffffff" stroke="#e4530f" stroke-width="3"></circle>
+                <circle cx="300" cy="65" r="4" fill="#ffffff" stroke="#e4530f" stroke-width="3"></circle>
+                <circle cx="400" cy="35" r="5" fill="#ffffff" stroke="#e4530f" stroke-width="4" filter="url(#glow)"></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03: Dr. Aanya Shah (PERSONAL BRANDING) -->
+      <div class="cs-card-wrapper" data-category="branding marketing growth" data-reveal>
+        <div class="cs-card-image-col">
+          <img src="assets/hero_arc_1.png" alt="Dr. Aanya Shah cosmetic dermatology case study">
+          <button class="btn-play-overlay">
+            <span class="btn-play-overlay-circle">&#9654;</span>
+            <span>View Case Study</span>
+          </button>
+        </div>
+        <div class="cs-card-info-col">
+          <div class="cs-card-header-meta">
+            <span class="cs-card-category">PERSONAL BRANDING</span>
+            <div class="cs-card-num-box">03</div>
+          </div>
+          <h2 class="cs-card-title">Dr. Aanya Shah</h2>
+          <h3 class="cs-card-subtitle">Positioning an Expert, Building Trust</h3>
+          <p class="cs-card-desc">
+            We crafted Dr. Aanya Shah's personal brand, boosting her online presence and patient trust significantly.
+          </p>
+          <div class="cs-card-divider"></div>
+          <div class="cs-card-stats-grid">
+            <div class="cs-stat-item-col">
+              <h5>2.1K <span class="stat-arrow-orange">&rarr;</span> 418K</h5>
+              <p>Followers Growth</p>
+            </div>
+            <div class="cs-stat-item-col">
+              <h5>62M+</h5>
+              <p>Total Views</p>
+            </div>
+            <div class="cs-stat-item-col">
+              <h5>+200%</h5>
+              <p>Consultations</p>
+            </div>
+          </div>
+          <a href="case-study-aanya.html" class="cs-card-cta-link">
+            <span>View full case study</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PAGINATION ============ -->
+  <section class="container">
+    <div class="cs-pagination">
+      <div class="cs-page-arrow arrow-left">&larr;</div>
+      <div class="cs-page-num active">1</div>
+      <div class="cs-page-num">2</div>
+      <div class="cs-page-num">3</div>
+      <div class="cs-page-arrow arrow-right">&rarr;</div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="container">
+    <div class="cs-cta-banner" data-reveal>
+      <div class="cs-cta-left">
+        <div class="cs-cta-badge-circle">
+          <!-- Paper plane icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </div>
+        <div class="cs-cta-texts">
+          <h4 class="cs-cta-title-main">Your success story <em>could be next.</em></h4>
+          <p class="cs-cta-desc">Let's work together to create measurable impact for your brand.</p>
+        </div>
+      </div>
+      <a href="contact.html" class="cs-cta-btn-start">
+        <span>Start a Project</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <span class="logo-text text-white">MARCO</span>
+          <div class="logo-dot"></div>
+        </a>
+        <p class="footer-about-text">A full-stack content agency building personal brands and business brands from the ground up.</p>
+      </div>
+      <div>
+        <div class="footer-header">SERVICES</div>
+        <div class="footer-links">
+          <a href="personal-branding.html">Personal Branding</a>
+          <a href="brand-business-marketing.html">Brand Marketing</a>
+          <a href="services.html">Branding &amp; Design</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">COMPANY</div>
+        <div class="footer-links">
+          <a href="work.html">Case Studies</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">SOCIAL</div>
+        <div class="footer-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Marca Creatives. All rights reserved.</span>
+      <span class="footer-adapted">design inspired by marca prototype</span>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger Script Loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+  <script src="motion.js"></script>
+
+  <!-- Dynamic category filtering scripting -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.cs-filter-btn');
+      const cards = document.querySelectorAll('.cs-card-wrapper');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all pills
+          filterBtns.forEach(b => {
+            b.classList.remove('active');
+            // Remove the dot marker if any was added dynamically
+            const dot = b.querySelector('.dot-indicator');
+            if (dot) dot.remove();
+          });
+
+          // Add active class to clicked pill
+          btn.classList.add('active');
+          
+          // Append dot marker to the active pill
+          if (btn.getAttribute('data-filter') === 'all') {
+            if (!btn.querySelector('.dot-indicator')) {
+              btn.insertAdjacentHTML('beforeend', ' <span class="dot-indicator">•</span>');
+            }
+          }
+
+          const filter = btn.getAttribute('data-filter');
+
+          // Filter card list
+          cards.forEach(card => {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
+              card.classList.remove('hidden-card');
+              // Trigger animations
+              card.style.opacity = '0';
+              card.style.transform = 'scale(0.97)';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+              }, 50);
+            } else {
+              card.classList.add('hidden-card');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

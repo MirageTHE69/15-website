@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequently Asked Questions | Marca Creatives</title>
+  <meta name="description" content="Find quick answers to the most common questions about working with Marca Creatives. Learn about our services, process, timelines, and pricing.">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Frequently Asked Questions | Marca Creatives">
+  <meta property="og:description" content="Answers to common questions about personal branding, B2B marketing, process, and billing.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="motion.css">
+
+  <!-- Custom styles for the FAQ page -->
+  <style>
+    /* ==========================================================================
+       FAQ PAGE SPECIFIC STYLES
+       ========================================================================== */
+
+    /* ---- Hero Section ---- */
+    .faq-hero {
+      padding: 90px 0 60px;
+      overflow: hidden;
+    }
+    .faq-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .faq-hero-left {
+      max-width: 600px;
+    }
+    .faq-hero-tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-color);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .faq-hero-tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+    }
+    .faq-hero-title {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--text-color);
+      margin-bottom: 24px;
+    }
+    .faq-hero-title em {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent-color);
+    }
+    .faq-hero-desc {
+      font-size: 17px;
+      color: var(--muted-text);
+      line-height: 1.6;
+    }
+
+    /* Graphic Circles Visual on Right */
+    .faq-hero-right {
+      position: relative;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .faq-graphic-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Dotted background pattern */
+    .faq-dots-pattern {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      width: 180px;
+      height: 140px;
+      background-image: radial-gradient(rgba(20, 20, 22, 0.08) 1.5px, transparent 1.5px);
+      background-size: 16px 16px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    /* Large pinkish bubble */
+    .faq-bubble-pink {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fdf2ee 0%, #fae6de 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 100px;
+      font-weight: 500;
+      color: var(--accent-color);
+      box-shadow: 0 20px 40px rgba(228, 83, 15, 0.06);
+      top: 15%;
+      left: 15%;
+      z-index: 2;
+      animation: floatBubblePink 6s ease-in-out infinite;
+    }
+    /* Smaller orange bubble */
+    .faq-bubble-orange {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      box-shadow: 0 15px 35px rgba(228, 83, 15, 0.25);
+      bottom: 15%;
+      right: 15%;
+      z-index: 3;
+      animation: floatBubbleOrange 6s ease-in-out infinite;
+    }
+    @keyframes floatBubblePink {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+    @keyframes floatBubbleOrange {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(8px) scale(1.02); }
+    }
+
+    /* ---- Split Grid Layout ---- */
+    .faq-split-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 60px;
+      align-items: start;
+      padding: 60px 0 100px;
+    }
+
+    /* Sidebar Cards */
+    .faq-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .faq-sidebar-card {
+      background: var(--white);
+      border: 1px solid rgba(20, 20, 22, 0.08);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow-card);
+    }
+    .faq-sidebar-card-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-color);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .faq-sidebar-card-desc {
+      font-size: 13.5px;
+      color: var(--muted-text);
+      line-height: 1.5;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    
+    /* Contact rows info */
+    .faq-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .faq-contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(228, 83, 15, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+    .faq-contact-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent-color);
+    }
+    .faq-contact-info span {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted-text);
+      margin-bottom: 2px;
+    }
+    .faq-contact-info strong {
+      display: block;
+      font-size: 14.5px;
+      color: var(--text-color);
+      font-weight: 700;
+    }
+    .faq-lets-talk-btn {
+      display: inline-flex;
+      align-items: center;
+      background: var(--text-color);
+      color: var(--white);
+      padding: 11px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 13.5px;
+      gap: 10px;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      margin-top: 10px;
+      width: fit-content;
+    }
+    .faq-lets-talk-btn:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+      color: var(--white);
+    }
+    .faq-lets-talk-btn svg {
+      transition: transform var(--transition-fast);
+    }
+    .faq-lets-talk-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Popular Topics list */
+    .faq-topics-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-color);
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    .faq-topics-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-topic-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: var(--white);
+      border: 1px solid rgba(20, 20, 22, 0.04);
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-color);
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .faq-topic-item:hover {
+      background: #fdfcf9;
+      border-color: rgba(228, 83, 15, 0.15);
+    }
+    .faq-topic-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-topic-left svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--muted-text);
+      transition: stroke var(--transition-fast);
+    }
+    .faq-topic-item:hover .faq-topic-left svg {
+      stroke: var(--accent-color);
+    }
+    .faq-topic-arrow {
+      color: var(--muted-text);
+      font-size: 11px;
+      transition: color var(--transition-fast), transform var(--transition-fast);
+    }
+    .faq-topic-item:hover .faq-topic-arrow {
+      color: var(--accent-color);
+      transform: translateX(2px);
+    }
+
+    /* General active topic */
+    .faq-topic-item.active {
+      border-color: var(--accent-color);
+      background-color: rgba(228, 83, 15, 0.04);
+      color: var(--accent-color);
+    }
+    .faq-topic-item.active .faq-topic-left svg {
+      stroke: var(--accent-color);
+    }
+    .faq-topic-item.active .faq-topic-arrow {
+      color: var(--accent-color);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* ---- Accordion Question List ---- */
+    .faq-accordion-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: var(--white);
+      border: 1px solid rgba(20, 20, 22, 0.08);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--shadow-card);
+    }
+    .faq-accordion-item {
+      border: 1px solid rgba(20, 20, 22, 0.06);
+      border-radius: 16px;
+      background: var(--white);
+      overflow: hidden;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .faq-accordion-item:hover {
+      border-color: #bebcb4;
+    }
+    .faq-accordion-header {
+      padding: 24px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-color);
+      transition: color var(--transition-fast);
+      user-select: none;
+    }
+    .faq-accordion-header:hover {
+      color: var(--accent-color);
+    }
+    .faq-accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 30px;
+      font-size: 14.5px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding-bottom 0.35s ease;
+      font-weight: 500;
+    }
+    
+    /* Toggle Icon styling (+ and —) */
+    .faq-toggle-icon {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--accent-color);
+      line-height: 1;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform var(--transition-fast);
+    }
+
+    /* Active open states */
+    .faq-accordion-item.active {
+      border-color: var(--accent-color);
+      box-shadow: 0 10px 25px rgba(228, 83, 15, 0.04);
+      background-color: #fdfcf9;
+    }
+    .faq-accordion-item.active .faq-accordion-body {
+      max-height: 300px;
+      padding-bottom: 24px;
+    }
+
+    /* ---- Dark CTA Banner ---- */
+    .faq-dark-cta-card {
+      background: #111113;
+      border-radius: 28px;
+      padding: 64px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 120px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 30px 65px rgba(0,0,0,0.3);
+    }
+    /* Dot pattern inside dark card */
+    .faq-dark-cta-dots {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 220px;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+      background-size: 16px 16px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .faq-dark-cta-left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      z-index: 2;
+    }
+    .faq-dark-cta-badge {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: rgba(228, 83, 15, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+    .faq-dark-cta-badge svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--accent-color);
+      fill: none;
+    }
+    .faq-dark-cta-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+    .faq-dark-cta-desc {
+      font-size: 15px;
+      color: var(--muted-dark);
+      font-weight: 500;
+    }
+    .faq-dark-cta-btn {
+      background: var(--white);
+      color: var(--text-color);
+      border-radius: 40px;
+      padding: 16px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition-fast), background-color var(--transition-fast);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+    .faq-dark-cta-btn:hover {
+      transform: translateY(-2px);
+      background-color: var(--accent-color);
+      color: var(--white);
+    }
+    .faq-dark-cta-btn svg {
+      transition: transform var(--transition-fast);
+      stroke: currentColor;
+    }
+    .faq-dark-cta-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ---- Responsive Design ---- */
+    @media (max-width: 991px) {
+      .faq-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+      }
+      .faq-hero-left {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .faq-hero-tag-badge {
+        justify-content: center;
+      }
+      .faq-hero-right {
+        height: 300px;
+      }
+      .faq-split-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .faq-sidebar {
+        order: 2;
+      }
+      .faq-accordion-container {
+        order: 1;
+        padding: 24px;
+      }
+      .faq-dark-cta-card {
+        flex-direction: column;
+        padding: 48px;
+        text-align: center;
+      }
+      .faq-dark-cta-left {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 768px) {
+      .faq-hero-title {
+        font-size: 46px;
+      }
+      .faq-accordion-header {
+        padding: 20px;
+        font-size: 15.5px;
+      }
+      .faq-accordion-body {
+        padding: 0 20px;
+      }
+      .faq-accordion-item.active .faq-accordion-body {
+        padding-bottom: 20px;
+      }
+      .faq-dark-cta-title {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ STICKY NAV ============ -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-text">MARCO</span>
+        <div class="logo-dot"></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#studio">Platform Guide</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html" class="active">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn-primary">Start a Project</a>
+        <a href="contact.html" class="btn-arrow" aria-label="Contact Us">&#8599;</a>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="faq-hero">
+    <div class="container faq-hero-grid">
+      <div class="faq-hero-left" data-reveal>
+        <div class="faq-hero-tag-badge">
+          <span class="faq-hero-tag-dot"></span>
+          <span>FAQ</span>
+        </div>
+        <h1 class="faq-hero-title">
+          Frequently Asked <em>Questions</em>
+        </h1>
+        <p class="faq-hero-desc">
+          Find quick answers to the most common questions about working with us.
+        </p>
+      </div>
+
+      <div class="faq-hero-right" data-reveal data-reveal-delay="100">
+        <div class="faq-graphic-wrapper">
+          <!-- Dot grid background -->
+          <div class="faq-dots-pattern"></div>
+          <!-- Large Question Bubble -->
+          <div class="faq-bubble-pink">?</div>
+          <!-- Smaller Overlapping Orange Bubble -->
+          <div class="faq-bubble-orange">...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAIN FAQ CONTENT GRID ============ -->
+  <section class="container">
+    <div class="faq-split-layout">
+
+      <!-- Left Column: Contact Sidebar & Popular Topics -->
+      <aside class="faq-sidebar" data-reveal>
+        
+        <!-- Contact card -->
+        <div class="faq-sidebar-card">
+          <h4 class="faq-sidebar-card-title">Still have questions?</h4>
+          <p class="faq-sidebar-card-desc">Can't find the answer you're looking for? We're here to help.</p>
+          
+          <div class="faq-contact-row">
+            <div class="faq-contact-icon">
+              <!-- Mail icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="faq-contact-info">
+              <span>Email us at</span>
+              <strong>hello@marca.com</strong>
+            </div>
+          </div>
+
+          <div class="faq-contact-row">
+            <div class="faq-contact-icon">
+              <!-- Phone icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="faq-contact-info">
+              <span>Call us at</span>
+              <strong>+91 98765 43210</strong>
+            </div>
+          </div>
+
+          <a href="contact.html" class="faq-lets-talk-btn">
+            <span>Let's Talk</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Popular Topics card -->
+        <div>
+          <h4 class="faq-topics-title">Popular Topics</h4>
+          <div class="faq-topics-list">
+            <div class="faq-topic-item active">
+              <div class="faq-topic-left">
+                <!-- Chat icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>General</span>
+              </div>
+              <span class="faq-topic-arrow">&rarr;</span>
+            </div>
+
+            <div class="faq-topic-item">
+              <div class="faq-topic-left">
+                <!-- Gear icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+                <span>Services &amp; Process</span>
+              </div>
+              <span class="faq-topic-arrow">&rsaquo;</span>
+            </div>
+
+            <div class="faq-topic-item">
+              <div class="faq-topic-left">
+                <!-- Clock icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Projects &amp; Timelines</span>
+              </div>
+              <span class="faq-topic-arrow">&rsaquo;</span>
+            </div>
+
+            <div class="faq-topic-item">
+              <div class="faq-topic-left">
+                <!-- Credit card icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="2" y1="10" x2="22" y2="10"></line>
+                </svg>
+                <span>Payments &amp; Billing</span>
+              </div>
+              <span class="faq-topic-arrow">&rsaquo;</span>
+            </div>
+
+            <div class="faq-topic-item">
+              <div class="faq-topic-left">
+                <!-- Headphones icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                </svg>
+                <span>Support &amp; Others</span>
+              </div>
+              <span class="faq-topic-arrow">&rsaquo;</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Right Column: Accordion Questions list -->
+      <main class="faq-accordion-container" data-reveal data-reveal-delay="80">
+
+        <!-- Question 1 (Open by default) -->
+        <div class="faq-accordion-item active">
+          <div class="faq-accordion-header">
+            <span>What services does MARCO offer?</span>
+            <span class="faq-toggle-icon">&mdash;</span>
+          </div>
+          <div class="faq-accordion-body">
+            We offer a full range of digital services including branding, digital marketing, web development, UI/UX design, content creation, and growth strategy tailored to help your brand scale.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-accordion-item">
+          <div class="faq-accordion-header">
+            <span>How does your process work?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-accordion-body">
+            Our process follows a 4-step pipeline: Discover (market research &amp; profiling), Define (brand positioning &amp; strategy), Deliver (campaign execution &amp; creatives), and Optimize (data analytics &amp; refinement).
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-accordion-item">
+          <div class="faq-accordion-header">
+            <span>How long does a typical project take?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-accordion-body">
+            Most core branding and campaign projects run between 3 to 6 months depending on the scope of deliverables and speed of feedback loops.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-accordion-item">
+          <div class="faq-accordion-header">
+            <span>Do you work with startups?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-accordion-body">
+            Yes! We frequently partner with seed and Series A startups to establish their visual identities, landing pages, and initial user acquisition campaigns from the ground up.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-accordion-item">
+          <div class="faq-accordion-header">
+            <span>How do you measure success?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-accordion-body">
+            We focus on hard business metrics: campaign reach, sales conversion lift, click-through rates (CTR), and return on ad spend (ROAS). All tracked dynamically on custom dashboards.
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="faq-accordion-item">
+          <div class="faq-accordion-header">
+            <span>What is your pricing model?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-accordion-body">
+            We work on standard project-based fees for creative assets/launches and performance-incentivized monthly retainers for ongoing optimization and growth loops.
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="faq-accordion-item">
+          <div class="faq-accordion-header">
+            <span>Can I request changes during the project?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-accordion-body">
+            Absolutely. We include a standard number of iterative review rounds in our statement of work to ensure the final output aligns perfectly with your requirements.
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="faq-accordion-item">
+          <div class="faq-accordion-header">
+            <span>Do you provide ongoing support?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-accordion-body">
+            Yes, we offer ongoing optimization retainers, technical support packages for websites, and periodic campaign refreshes to keep your brand scaling.
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="faq-accordion-item">
+          <div class="faq-accordion-header">
+            <span>How do I get started with MARCO?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-accordion-body">
+            Simply click 'Start a Project' or contact our team to schedule a 30-minute discovery call where we'll align on your growth goals.
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="container">
+    <div class="faq-dark-cta-card" data-reveal>
+      <!-- Background dots decoration -->
+      <div class="faq-dark-cta-dots"></div>
+      
+      <div class="faq-dark-cta-left">
+        <div class="faq-dark-cta-badge">
+          <!-- Paper plane icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </div>
+        <div class="faq-dark-cta-texts">
+          <h4 class="faq-dark-cta-title">Have a project in mind?</h4>
+          <p class="faq-dark-cta-desc">Let's build something great together.</p>
+        </div>
+      </div>
+      <a href="contact.html" class="faq-dark-cta-btn">
+        <span>Start a Project</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <span class="logo-text text-white">MARCO</span>
+          <div class="logo-dot"></div>
+        </a>
+        <p class="footer-about-text">A full-stack content agency building personal brands and business brands from the ground up.</p>
+      </div>
+      <div>
+        <div class="footer-header">SERVICES</div>
+        <div class="footer-links">
+          <a href="personal-branding.html">Personal Branding</a>
+          <a href="brand-business-marketing.html">Brand Marketing</a>
+          <a href="services.html">Branding &amp; Design</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">COMPANY</div>
+        <div class="footer-links">
+          <a href="work.html">Case Studies</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">SOCIAL</div>
+        <div class="footer-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Marca Creatives. All rights reserved.</span>
+      <span class="footer-adapted">design inspired by marca prototype</span>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger Script Loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+  <script src="motion.js"></script>
+
+  <!-- Interactive Accordion Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordionItems = document.querySelectorAll('.faq-accordion-item');
+
+      accordionItems.forEach(item => {
+        const header = item.querySelector('.faq-accordion-header');
+        const icon = item.querySelector('.faq-toggle-icon');
+
+        header.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+
+          // Close all open items
+          accordionItems.forEach(otherItem => {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-toggle-icon').textContent = '+';
+          });
+
+          // Toggle current clicked item
+          if (!isActive) {
+            item.classList.add('active');
+            icon.textContent = '—';
+          } else {
+            item.classList.remove('active');
+            icon.textContent = '+';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

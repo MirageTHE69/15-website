@@ -1,24 +1,675 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our Services | Marca Creatives</title>
   <meta name="description" content="Explore everything we do to build brands that win. From Personal Branding to Brand Marketing and Graphic Design, our in-house team produces high-impact content.">
-  
+
   <!-- OpenGraph Metadata -->
   <meta property="og:title" content="Our Services | Marca Creatives">
   <meta property="og:description" content="Discover our full-stack content marketing services. We build strategy, produce everything in-house, and grow business & personal brands.">
   <meta property="og:type" content="website">
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="motion.css">
+
+  <style>
+    /* ============================================================
+       SERVICES PAGE — INLINE STYLES
+       ============================================================ */
+
+    /* ---- HERO ---- */
+    .sv-hero {
+      padding: 90px 0 72px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .sv-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 460px;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .sv-hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+    .sv-hero-title {
+      font-size: 68px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 22px;
+    }
+
+    /* Line 1: bold sans — "We Build Brands." */
+    .sv-hero-title .line-sans {
+      display: block;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-weight: 800;
+      color: var(--text-color);
+    }
+
+    /* Line 2: "We Create" in serif italic + "Impact." in orange serif italic */
+    .sv-hero-title .line-serif {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.05em;
+      color: var(--text-color);
+      letter-spacing: -0.02em;
+    }
+
+    .sv-hero-title .line-serif em {
+      font-style: italic;
+      color: var(--accent-color);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+    }
+
+    .sv-hero-desc {
+      font-size: 17px;
+      color: var(--muted-text);
+      line-height: 1.65;
+      max-width: 480px;
+    }
+
+    .sv-hero-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 44px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .sv-hero-meta-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted-text);
+    }
+
+    /* ---- Circular badge redesign ---- */
+    /* Outer positioning shell */
+    .sv-hero-badge-outer {
+      position: relative;
+      width: 420px;
+      height: 420px;
+      margin: 0 auto;
+    }
+
+    /* MAIN CIRCLE: the large photo */
+    .sv-hero-badge-wrap {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .sv-hero-badge-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    /* Outer thin orbit path circle */
+    .sv-hero-outer-orbit-path {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(0,0,0,0.06);
+      pointer-events: none;
+    }
+
+    /* Orange dot fixed on the outer orbit path at 9-o'clock */
+    .sv-hero-dot {
+      position: absolute;
+      top: 185px;
+      left: -5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      z-index: 10;
+    }
+
+    /* ORBITING CIRCLE: small circle at bottom-right with text ring + arrow */
+    .sv-hero-orbit {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 150px;
+      height: 150px;
+    }
+
+    /* Inner white background of orbiting circle */
+    .sv-hero-orbit-inner {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Arrow icon in center of the orbit circle */
+    .sv-hero-orbit-arrow {
+      font-size: 32px;
+      color: var(--accent-color);
+      line-height: 1;
+      transform: rotate(0deg);
+      display: block;
+      font-style: normal;
+    }
+
+    /* Spinning text ring around the orbit circle */
+    .sv-hero-text-ring {
+      position: absolute;
+      inset: -12px;
+      animation: rotarySpin 14s linear infinite;
+      pointer-events: none;
+    }
+
+    .sv-hero-text-ring svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .sv-hero-text-ring text {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2.8px;
+      fill: #57564f;
+      text-transform: uppercase;
+    }
+
+    @keyframes rotarySpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* ---- WHAT WE DO ---- */
+    .sv-what {
+      padding: 100px 0;
+    }
+
+    .sv-what-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .sv-what-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      margin-bottom: 16px;
+    }
+
+    .sv-what-title {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--text-color);
+    }
+
+    .sv-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .sv-card {
+      padding: 44px 36px;
+      border-right: 1px solid var(--border-color);
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      transition: background var(--transition-fast);
+    }
+
+    .sv-card:last-child { border-right: none; }
+    .sv-card:hover { background: #fafaf8; }
+
+    .sv-card-icon {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 24px;
+    }
+
+    .sv-card-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--text-color);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .sv-card-number {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--muted-text);
+      margin-bottom: 10px;
+    }
+
+    .sv-card-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 6px;
+      color: var(--text-color);
+    }
+
+    .sv-card-subtitle {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-family: var(--font-mono);
+    }
+
+    .sv-card-desc {
+      font-size: 14.5px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .sv-card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .sv-card-list li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13.5px;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    .sv-card-list li::before {
+      content: '';
+      width: 17px;
+      height: 17px;
+      min-width: 17px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent-color);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23e4530f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-size: 9px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .sv-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-top: auto;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      text-decoration: none;
+      transition: color var(--transition-fast), gap var(--transition-fast);
+    }
+
+    .sv-card-cta:hover {
+      color: var(--accent-color);
+      gap: 10px;
+    }
+
+    /* ---- PROCESS ---- */
+    .sv-process {
+      padding: 100px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .sv-process-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .sv-process-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      margin-bottom: 16px;
+    }
+
+    .sv-process-title {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .sv-process-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .sv-step {
+      padding: 40px 28px;
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sv-step:last-child { border-right: none; }
+
+    .sv-step-icon {
+      width: 38px;
+      height: 38px;
+      margin-bottom: 20px;
+    }
+
+    .sv-step-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--text-color);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .sv-step-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--accent-color);
+      margin-bottom: 6px;
+    }
+
+    .sv-step-title {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+
+    .sv-step-desc {
+      font-size: 13px;
+      color: var(--muted-text);
+      line-height: 1.55;
+    }
+
+    /* ---- WHY CHOOSE US ---- */
+    .sv-why {
+      padding: 0 0 100px;
+    }
+
+    .sv-why-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .sv-why-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.32);
+    }
+
+    .sv-why-overlay {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 56px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .sv-why-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+    }
+
+    .sv-why-title {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--white);
+      max-width: 480px;
+      margin-bottom: 12px;
+    }
+
+    .sv-why-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.55;
+      max-width: 400px;
+    }
+
+    .sv-why-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--text-color);
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: transform var(--transition-fast), background var(--transition-fast);
+      flex-shrink: 0;
+      align-self: flex-end;
+    }
+
+    .sv-why-cta:hover {
+      transform: translateY(-2px);
+      background: var(--accent-color);
+      color: var(--white);
+    }
+
+    /* ---- TICKER ---- */
+    .sv-ticker {
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 14px 0;
+      overflow: hidden;
+      margin-bottom: 80px;
+    }
+
+    .sv-ticker-track {
+      display: flex;
+      gap: 60px;
+      white-space: nowrap;
+      animation: tickerScroll 24s linear infinite;
+      width: max-content;
+    }
+
+    .sv-ticker-track span {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted-text);
+      display: inline-flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .sv-ticker-track span::after {
+      content: '·';
+      color: var(--accent-color);
+      font-size: 20px;
+    }
+
+    @keyframes tickerScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ---- STATS BAR ---- */
+    .sv-stats {
+      padding: 0 0 80px;
+    }
+
+    .sv-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .sv-stat-item {
+      padding: 40px 36px;
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .sv-stat-item:last-child { border-right: none; }
+
+    .sv-stat-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+    }
+
+    .sv-stat-icon svg {
+      width: 38px;
+      height: 38px;
+      stroke: var(--text-color);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .sv-stat-info h4 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .sv-stat-info p {
+      font-size: 13px;
+      color: var(--muted-text);
+      line-height: 1.4;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 1100px) {
+      .sv-hero-inner { grid-template-columns: 1fr; text-align: left; }
+      .sv-hero-title { font-size: 52px; }
+      .sv-hero-badge-outer { width: 300px; height: 300px; }
+      .sv-hero-badge-wrap { width: 240px; height: 240px; }
+      .sv-hero-orbit { width: 120px; height: 120px; }
+      .sv-cards-grid { grid-template-columns: 1fr; }
+      .sv-card { border-right: none; border-bottom: 1px solid var(--border-color); }
+      .sv-card:last-child { border-bottom: none; }
+      .sv-process-steps { grid-template-columns: repeat(3, 1fr); }
+      .sv-step:nth-child(3) { border-right: none; }
+      .sv-step:nth-child(n+4) { border-top: 1px solid var(--border-color); }
+      .sv-stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .sv-stat-item:nth-child(2) { border-right: none; }
+      .sv-stat-item:nth-child(3) { border-right: 1px solid var(--border-color); border-top: 1px solid var(--border-color); }
+      .sv-stat-item:nth-child(4) { border-top: 1px solid var(--border-color); }
+    }
+
+    @media (max-width: 640px) {
+      .sv-hero-title { font-size: 34px; }
+      .sv-hero-badge-outer { width: 240px; height: 240px; }
+      .sv-hero-badge-wrap { width: 190px; height: 190px; }
+      .sv-hero-orbit { width: 100px; height: 100px; }
+      .sv-what-title, .sv-process-title { font-size: 28px; }
+      .sv-process-steps { grid-template-columns: 1fr 1fr; }
+      .sv-step:nth-child(2n) { border-right: none; }
+      .sv-step:nth-child(n+3) { border-top: 1px solid var(--border-color); }
+      .sv-why-overlay { flex-direction: column; align-items: flex-start; padding: 36px 28px; }
+      .sv-why-title { font-size: 26px; }
+      .sv-stats-grid { grid-template-columns: 1fr; }
+      .sv-stat-item { border-right: none; border-bottom: 1px solid var(--border-color); }
+      .sv-stat-item:last-child { border-bottom: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -32,15 +683,14 @@
       <div class="nav-links" id="navLinks">
         <a href="index.html#studio">Platform Guide</a>
         <a href="services.html" class="active">Services</a>
-        <a href="index.html#work">Case Studies</a>
+        <a href="work.html">Case Studies</a>
         <a href="about.html">About</a>
-        <a href="index.html#reels">Portfolio</a>
-        <a href="index.html#faq">FAQ</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
       </div>
       <div class="nav-cta">
         <a href="contact.html" class="btn-primary">Start a Project</a>
         <a href="contact.html" class="btn-arrow" aria-label="Contact Us">&#8599;</a>
-        <!-- Mobile Menu Toggle -->
         <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle Menu">
           <span></span>
           <span></span>
@@ -49,369 +699,302 @@
     </nav>
   </header>
 
-  <!-- ============ SERVICES HERO ============ -->
-  <section class="services-hero-section">
-    <div class="container services-hero-grid">
-      <div class="services-hero-left" data-reveal>
-        <div class="section-tag">OUR SERVICES</div>
-        <h1 class="services-hero-title">
-          Everything We Do<br>To Build Brands<br>That <span class="italic-serif">Win.</span>
-        </h1>
-        <p class="services-hero-desc">
-          We are a full-stack marketing agency helping individuals and businesses build powerful brands, create impact, and achieve measurable growth.
-        </p>
-        <div class="services-hero-ctas">
-          <a href="index.html#contact" class="btn-primary-pill">Start Your Project &rarr;</a>
-          <a href="index.html#work" class="btn-explore-work">Explore Our Work <span class="bullet-dot"></span></a>
-        </div>
-      </div>
-
-      <div class="services-hero-right" data-reveal data-reveal-delay="100">
-        <div class="hero-collage">
-          <div class="collage-item collage-img-1">
-            <img src="assets/hero_arc_7.png" alt="Studio shooting camera">
-          </div>
-          <div class="collage-item collage-img-2">
-            <img src="assets/hero_arc_6.png" alt="Video editor interface">
-          </div>
-          <div class="collage-item collage-img-3">
-            <img src="assets/couple_sofa.png" alt="Team meeting collaborating">
-          </div>
-          <div class="collage-item collage-img-4">
-            <img src="assets/services_branding.png" alt="Stationery branding visual">
-          </div>
-          
-          <!-- Floating badge overlay -->
-          <div class="collage-floating-badge">
-            <div class="badge-tag">RESULTS THAT SPEAK</div>
-            <div class="badge-number">800M+</div>
-            <div class="badge-desc">Total Views Generated<br>Across Clients</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ QUICK STATS STRIP ============ -->
-  <section class="quick-stats-bar">
-    <div class="container quick-stats-grid">
-      <div class="q-stat-item" data-reveal>
-        <div class="q-stat-icon">ðŸ‘¥</div>
-        <div class="q-stat-info">
-          <h4>200K â€“ 500K+</h4>
-          <p>Followers Gained By Our Clients</p>
-        </div>
-      </div>
-      <div class="q-stat-item" data-reveal data-reveal-delay="80">
-        <div class="q-stat-icon">ðŸ“¹</div>
-        <div class="q-stat-info">
-          <h4>1000+</h4>
-          <p>Videos Produced Across Industries</p>
-        </div>
-      </div>
-      <div class="q-stat-item" data-reveal data-reveal-delay="160">
-        <div class="q-stat-icon">ðŸ©º</div>
-        <div class="q-stat-info">
-          <h4>Top Choice For</h4>
-          <p>Doctors &amp; Healthcare Professionals</p>
-        </div>
-      </div>
-      <div class="q-stat-item" data-reveal data-reveal-delay="240">
-        <div class="q-stat-icon">ðŸ“ˆ</div>
-        <div class="q-stat-info">
-          <h4>Results-Driven</h4>
-          <p>Strategies That Create Real Impact</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ DETAILED SERVICES ROW MODULES ============ -->
-  <section class="services-list-section">
+  <!-- ============ HERO ============ -->
+  <section class="sv-hero">
     <div class="container">
+      <div class="sv-hero-inner">
 
-      <!-- Service Row 01 -->
-      <div class="service-row-item">
-        <div class="service-row-left" data-reveal>
-          <div class="service-row-number">01</div>
-          <h2 class="service-row-title"><a href="personal-branding.html">Personal Branding</a></h2>
-          <div class="service-row-tag">OUR CORE FOCUS</div>
-          <p class="service-row-desc">
-            We help founders, doctors, entrepreneurs, finance creators and other professionals build personal brands that attract attention, build trust and create opportunities.
+        <!-- Left: Text -->
+        <div data-reveal>
+          <div class="sv-hero-eyebrow">Our Services</div>
+          <h1 class="sv-hero-title">
+            <span class="line-sans">We Build Brands.</span>
+            <span class="line-serif">We Create <em>Impact.</em></span>
+          </h1>
+          <p class="sv-hero-desc">
+            From personal branding to performance marketing,
+            we help individuals and businesses grow with
+            strategy, creativity, and results that matter.
           </p>
-          
-          <div class="service-row-bullets">
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Research &amp; Content Strategy</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Thumbnail &amp; Cover Design</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Topic Ideation</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Social Media Management</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Scriptwriting</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Publishing &amp; Growth Strategy</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Video Production (Shooting)</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Community Building</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Editing</div>
+          <div class="sv-hero-meta">
+            <span class="sv-hero-meta-tag">Full-Service Creative Marketing Agency</span>
+            <span class="sv-hero-meta-tag">Strategy &middot; Creativity &middot; Growth.</span>
           </div>
-          
-          <a href="personal-branding.html" class="btn-black-pill">View Details &rarr;</a>
         </div>
 
-        <div class="service-row-right" data-reveal data-reveal-delay="100">
-          <div class="service-visual-card dark-theme-card">
-            <img src="assets/services_personal.png" alt="Personal Branding Portrait Visual">
-            <div class="visual-card-overlay">
-              <div class="overlay-stat-item">
-                <span class="overlay-stat-icon">ðŸ‘¤</span>
-                <div>
-                  <h4>800M+</h4>
-                  <p>Total Views Generated</p>
-                </div>
+        <!-- Right: Two-circle badge composition -->
+        <div data-reveal data-reveal-delay="100" style="display:flex;justify-content:center;align-items:center;">
+          <div class="sv-hero-badge-outer">
+
+            <!-- MAIN CIRCLE: large dark studio photo -->
+            <div class="sv-hero-badge-wrap">
+              <img
+                src="assets/studio_hero_dark.png"
+                alt="Marca studio — camera and lighting equipment"
+                class="sv-hero-badge-img"
+              >
+            </div>
+
+            <!-- Outer thin orbit path circle -->
+            <div class="sv-hero-outer-orbit-path"></div>
+
+            <!-- Orange dot at 9 o'clock on the outer orbit path -->
+            <div class="sv-hero-dot"></div>
+
+            <!-- ORBIT CIRCLE: bottom-right, contains spinning text + arrow -->
+            <div class="sv-hero-orbit">
+              <!-- Spinning text ring (sits outside the orbit circle) -->
+              <div class="sv-hero-text-ring">
+                <svg viewBox="0 0 188 188" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <path id="orbitPath" d="M 94,94 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"/>
+                  </defs>
+                  <!-- Dashed border circle -->
+                  <circle cx="94" cy="94" r="80" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1" stroke-dasharray="3 5"/>
+                  <!-- Circular text -->
+                  <text>
+                    <textPath href="#orbitPath" startOffset="0%">STRATEGY · CREATIVITY · GROWTH · IMPACT ·&nbsp;&nbsp;</textPath>
+                  </text>
+                </svg>
               </div>
-              <div class="overlay-stat-item">
-                <span class="overlay-stat-icon">ðŸ“¹</span>
-                <div>
-                  <h4>200K â€“ 500K+</h4>
-                  <p>Followers Gained</p>
-                </div>
-              </div>
-              <div class="overlay-stat-item">
-                <span class="overlay-stat-icon">ðŸ–¥</span>
-                <div>
-                  <h4>50+</h4>
-                  <p>Doctors Helped To Build Their Brand</p>
-                </div>
-              </div>
-              <div class="overlay-stat-item">
-                <span class="overlay-stat-icon">â¤ï¸</span>
-                <div>
-                  <h4>100+</h4>
-                  <p>Personal Brands Built From Scratch</p>
-                </div>
+              <!-- White inner circle with arrow -->
+              <div class="sv-hero-orbit-inner">
+                <span class="sv-hero-orbit-arrow">&#x2197;</span>
               </div>
             </div>
+
           </div>
         </div>
+
       </div>
-
-      <!-- Service Row 02 -->
-      <div class="service-row-item reverse-row">
-        <div class="service-row-left" data-reveal>
-          <div class="service-visual-card">
-            <img src="assets/hero_arc_7.png" alt="Brand shooting studio scene">
-            <div class="visual-card-logo-board">
-              <div class="board-title">BRANDS WE'VE WORKED WITH</div>
-              <div class="board-logos">
-                <span class="logo-text-item logo-kfc">KFC</span>
-                <span class="logo-text-item logo-nykaa">NYKAA</span>
-                <span class="logo-text-item logo-ap">asianpaints</span>
-                <span class="logo-text-item logo-tanishq">TANISHQ</span>
-                <span class="logo-text-item logo-croma">croma</span>
-              </div>
-              <a href="brand-business-marketing.html" class="board-link">View Details &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row-right" data-reveal data-reveal-delay="100">
-          <div class="service-row-number">02</div>
-          <h2 class="service-row-title"><a href="brand-business-marketing.html">Brand &amp; Business Marketing</a></h2>
-          <div class="service-row-tag">GROW YOUR BUSINESS. MAXIMIZE YOUR IMPACT.</div>
-          <p class="service-row-desc">
-            We craft result-driven marketing strategies and campaigns that help businesses stand out, connect with the right audience and drive measurable growth.
-          </p>
-          
-          <div class="service-row-bullets">
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Brand Strategy &amp; Positioning</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Campaign Planning &amp; Execution</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Photography</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Influencer Marketing</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Commercial Video Production</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Social Media Management</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Video Ads</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> Performance Focused Campaigns</div>
-            <div class="bullet-item"><span class="check-icon">âœ“</span> TVCs</div>
-          </div>
-          
-          <a href="brand-business-marketing.html" class="btn-black-pill" style="margin-bottom: 30px; display: inline-flex;">View Details &rarr;</a>
-
-          <div class="industries-block">
-            <h4>Industries We Work With</h4>
-            <div class="industries-grid">
-              <div class="ind-item">
-                <span class="ind-icon">ðŸ¢</span>
-                <span>Architecture &amp;<br>Interior Design</span>
-              </div>
-              <div class="ind-item">
-                <span class="ind-icon">ðŸ½</span>
-                <span>Restaurants</span>
-              </div>
-              <div class="ind-item">
-                <span class="ind-icon">ðŸŽ¨</span>
-                <span>Fashion &amp;<br>Lifestyle</span>
-              </div>
-              <div class="ind-item">
-                <span class="ind-icon">ðŸ›</span>
-                <span>Consumer<br>Brands</span>
-              </div>
-              <div class="ind-item">
-                <span class="ind-icon">ðŸ©º</span>
-                <span>Healthcare</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Row 03 -->
-      <div class="service-row-item">
-        <div class="service-row-left" data-reveal>
-          <div class="row-header-badge">
-            <span class="badge-num-pill">03</span>
-            <span class="badge-label-text">OUR SERVICE</span>
-          </div>
-          <h2 class="service-row-title">Branding &amp;<br>Graphic <span class="italic-serif">Design.</span></h2>
-          <p class="service-row-desc">
-            We create powerful brand identities and stunning visuals that communicate your values, build recognition, and leave a lasting impact.
-          </p>
-          
-          <div class="branding-cards-grid">
-            
-            <!-- Card 1 -->
-            <div class="branding-card-item">
-              <div class="metric-row-icon">
-                <svg class="sol-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2v10"></path>
-                  <path d="M17 8l-5-6-5 6v6h10V8z"></path>
-                  <circle cx="12" cy="12" r="1"></circle>
-                </svg>
-              </div>
-              <div>
-                <h4>Brand Identity Design</h4>
-                <p>Unique logos, typography and visual systems that define your brand.</p>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="branding-card-item">
-              <div class="metric-row-icon">
-                <svg class="sol-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="16.5 9.4 7.5 4.21 16.5 9.4"></polyline>
-                  <polygon points="12 22.08 12 12 20.5 7.15 20.5 17.08 12 22.08"></polygon>
-                  <polygon points="12 22.08 3.5 17.08 3.5 7.15 12 12 12 22.08"></polygon>
-                  <polygon points="12 12 3.5 7.15 12 2.21 20.5 7.15 12 12"></polygon>
-                </svg>
-              </div>
-              <div>
-                <h4>Packaging Design</h4>
-                <p>Creative packaging that attracts attention and strengthens recall.</p>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="branding-card-item">
-              <div class="metric-row-icon">
-                <svg class="sol-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <circle cx="12" cy="12" r="6"></circle>
-                  <circle cx="12" cy="12" r="2"></circle>
-                </svg>
-              </div>
-              <div>
-                <h4>Brand Positioning</h4>
-                <p>Clear positioning that communicates your brand's purpose and value.</p>
-              </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="branding-card-item">
-              <div class="metric-row-icon">
-                <svg class="sol-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
-              </div>
-              <div>
-                <h4>Graphic Design</h4>
-                <p>Brochures, flyers, presentations and other marketing collaterals.</p>
-              </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="branding-card-item">
-              <div class="metric-row-icon">
-                <svg class="sol-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 14.5 4 16.5 5.5 18C7 19.5 7.5 20 8.5 21C9.5 22 12 22 12 22Z"></path>
-                  <circle cx="7.5" cy="10.5" r="1.5"></circle>
-                  <circle cx="11.5" cy="7.5" r="1.5"></circle>
-                  <circle cx="16.5" cy="9.5" r="1.5"></circle>
-                </svg>
-              </div>
-              <div>
-                <h4>Color Palette &amp; Visual Identity</h4>
-                <p>Strategic color systems and visual language that create consistency.</p>
-              </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="branding-card-item">
-              <div class="metric-row-icon">
-                <svg class="sol-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                </svg>
-              </div>
-              <div>
-                <h4>Social Media Creatives</h4>
-                <p>Scroll-stopping posts and creatives tailored for every platform.</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="branding-bottom-row">
-            <div class="thumbnail-highlight-card">
-              <div class="metric-row-icon">
-                <svg class="sol-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="20" x2="18" y2="10"></line>
-                  <line x1="12" y1="20" x2="12" y2="4"></line>
-                  <line x1="6" y1="20" x2="6" y2="14"></line>
-                  <polyline points="4 20 12 12 20 18"></polyline>
-                </svg>
-              </div>
-              <div>
-                <h4>High-Converting Thumbnails &amp; Cover Designs</h4>
-                <p>Custom thumbnails and covers that boost clicks, engagement and growth.</p>
-              </div>
-            </div>
-            
-            <a href="index.html#contact" class="btn-cta-outline-pill" style="white-space: nowrap;">View Our Work &rarr;</a>
-          </div>
-        </div>
-
-        <div class="service-row-right" data-reveal data-reveal-delay="100">
-          <div class="service-visual-card">
-            <img src="assets/services_branding.png" alt="Luxury Packaging branding box visual">
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- ============ FOOTER CTA BANNER ============ -->
-  <section class="services-cta-banner">
+  <!-- ============ WHAT WE DO ============ -->
+  <section class="sv-what">
     <div class="container">
-      <div class="cta-banner-card" data-reveal>
-        <img src="assets/couple_sofa.png" alt="Collaboration banner backgrounds" class="cta-banner-bg">
-        <div class="cta-banner-overlay">
-          <div class="cta-banner-left">
-            <div class="banner-subtag">READY TO BUILD YOUR BRAND?</div>
-            <h2 class="banner-title">Let's create impact together.<br>Book a free strategy call with our team.</h2>
+      <div class="sv-what-header" data-reveal>
+        <div class="sv-what-eyebrow">What We Do</div>
+        <h2 class="sv-what-title">End-to-End Solutions for Meaningful Growth.</h2>
+      </div>
+
+      <div class="sv-cards-grid" data-reveal data-reveal-delay="80">
+
+        <!-- Card 01 — Personal Branding -->
+        <div class="sv-card">
+          <div class="sv-card-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
           </div>
-          <div class="cta-banner-right">
-            <a href="index.html#contact" class="btn-banner-action">Book a Free Call &rarr;</a>
+          <div class="sv-card-number">01</div>
+          <h3 class="sv-card-title">Personal Branding</h3>
+          <div class="sv-card-subtitle">Build Your Identity. Grow Your Influence.</div>
+          <p class="sv-card-desc">
+            We help professionals and creators build powerful personal brands that attract the right audience and open doors to new opportunities.
+          </p>
+          <ul class="sv-card-list">
+            <li>Research &amp; Content Strategy</li>
+            <li>Topic Ideation &amp; Scriptwriting</li>
+            <li>Video Production &amp; Editing</li>
+            <li>Thumbnail &amp; Cover Design</li>
+            <li>Social Media Management</li>
+            <li>Publishing &amp; Growth Strategy</li>
+          </ul>
+          <a href="personal-branding.html" class="sv-card-cta" id="cta-personal-branding">
+            Explore Personal Branding &nbsp;&rarr;
+          </a>
+        </div>
+
+        <!-- Card 02 — Brand & Business Marketing -->
+        <div class="sv-card">
+          <div class="sv-card-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </div>
+          <div class="sv-card-number">02</div>
+          <h3 class="sv-card-title">Brand &amp; Business<br>Marketing</h3>
+          <div class="sv-card-subtitle">Strategic Marketing. Real Business Growth.</div>
+          <p class="sv-card-desc">
+            We create data-driven marketing strategies and campaigns that help businesses stand out, connect with their audience, and drive measurable growth.
+          </p>
+          <ul class="sv-card-list">
+            <li>Brand Strategy &amp; Positioning</li>
+            <li>Photography &amp; Videography</li>
+            <li>Video Ads &amp; TVCs</li>
+            <li>Campaign Planning &amp; Execution</li>
+            <li>Influencer Marketing</li>
+            <li>Social Media Management</li>
+          </ul>
+          <a href="brand-business-marketing.html" class="sv-card-cta" id="cta-brand-marketing">
+            Explore Brand Marketing &nbsp;&rarr;
+          </a>
+        </div>
+
+        <!-- Card 03 — Branding & Graphic Design -->
+        <div class="sv-card">
+          <div class="sv-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+          </div>
+          <div class="sv-card-number">03</div>
+          <h3 class="sv-card-title">Branding &amp; Graphic<br>Design</h3>
+          <div class="sv-card-subtitle">Design That Defines. Creatives That Convert.</div>
+          <p class="sv-card-desc">
+            We design visual identities and creative assets that make your brand unforgettable and your content unmissable.
+          </p>
+          <ul class="sv-card-list">
+            <li>Brand Identity Design</li>
+            <li>Brand Positioning</li>
+            <li>Color Palette &amp; Visual Identity</li>
+            <li>Packaging Design</li>
+            <li>Graphic Design</li>
+            <li>Thumbnails &amp; Social Creatives</li>
+          </ul>
+          <a href="services.html" class="sv-card-cta" id="cta-design-services">
+            Explore Design Services &nbsp;&rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR PROCESS ============ -->
+  <section class="sv-process">
+    <div class="container">
+      <div class="sv-process-header" data-reveal>
+        <div class="sv-process-eyebrow">Our Process</div>
+        <h2 class="sv-process-title">A Simple Process. Powerful Results.</h2>
+      </div>
+
+      <div class="sv-process-steps" data-reveal data-reveal-delay="80">
+
+        <div class="sv-step">
+          <div class="sv-step-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="sv-step-num">01</div>
+          <div class="sv-step-title">Discover</div>
+          <p class="sv-step-desc">We understand your goals, audience, and challenges.</p>
+        </div>
+
+        <div class="sv-step">
+          <div class="sv-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.4 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+          </div>
+          <div class="sv-step-num">02</div>
+          <div class="sv-step-title">Strategize</div>
+          <p class="sv-step-desc">We craft a data-driven strategy tailored to you.</p>
+        </div>
+
+        <div class="sv-step">
+          <div class="sv-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <div class="sv-step-num">03</div>
+          <div class="sv-step-title">Create</div>
+          <p class="sv-step-desc">Our team brings ideas to life with creativity.</p>
+        </div>
+
+        <div class="sv-step">
+          <div class="sv-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          </div>
+          <div class="sv-step-num">04</div>
+          <div class="sv-step-title">Launch</div>
+          <p class="sv-step-desc">We execute, optimise, and ensure a smooth launch.</p>
+        </div>
+
+        <div class="sv-step">
+          <div class="sv-step-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div class="sv-step-num">05</div>
+          <div class="sv-step-title">Grow</div>
+          <p class="sv-step-desc">We analyse, refine, and scale your growth.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="sv-why">
+    <div class="container">
+      <div class="sv-why-card" data-reveal>
+        <img src="assets/couple_sofa.png" alt="Creative collaboration" class="sv-why-bg">
+        <div class="sv-why-overlay">
+          <div class="sv-why-left">
+            <div class="sv-why-eyebrow">Why Choose Us</div>
+            <h2 class="sv-why-title">We Combine Strategy,<br>Creativity &amp; Execution.</h2>
+            <p class="sv-why-sub">We're not just a service provider — we're your growth partner. Your success is our mission.</p>
+          </div>
+          <a href="contact.html" class="sv-why-cta" id="cta-lets-work">Let's Work Together &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TICKER ============ -->
+  <div class="sv-ticker">
+    <div class="sv-ticker-track">
+      <span>800M+ Total Views Generated</span>
+      <span>200K – 500K+ Followers Gained</span>
+      <span>50+ Doctors &amp; Professionals Helped</span>
+      <span>5+ Industries Served</span>
+      <span>1000+ Videos Produced</span>
+      <span>Strategy-First Agency</span>
+      <span>800M+ Total Views Generated</span>
+      <span>200K – 500K+ Followers Gained</span>
+      <span>50+ Doctors &amp; Professionals Helped</span>
+      <span>5+ Industries Served</span>
+      <span>1000+ Videos Produced</span>
+      <span>Strategy-First Agency</span>
+    </div>
+  </div>
+
+  <!-- ============ STATS ============ -->
+  <section class="sv-stats">
+    <div class="container">
+      <div class="sv-stats-grid" data-reveal>
+
+        <div class="sv-stat-item">
+          <div class="sv-stat-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="15" height="10" rx="2"/><polygon points="17 9 22 6 22 18 17 15"/></svg>
+          </div>
+          <div class="sv-stat-info">
+            <h4>800M+</h4>
+            <p>Total Views<br>Generated</p>
           </div>
         </div>
+
+        <div class="sv-stat-item">
+          <div class="sv-stat-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="sv-stat-info">
+            <h4>200K – 500K+</h4>
+            <p>Followers Gained for<br>Multiple Creators</p>
+          </div>
+        </div>
+
+        <div class="sv-stat-item">
+          <div class="sv-stat-icon">
+            <svg viewBox="0 0 24 24"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+          </div>
+          <div class="sv-stat-info">
+            <h4>50+</h4>
+            <p>Doctors &amp; Professionals<br>Helped Build Their Brand</p>
+          </div>
+        </div>
+
+        <div class="sv-stat-item">
+          <div class="sv-stat-icon">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="sv-stat-info">
+            <h4>5+</h4>
+            <p>Industries<br>Served</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -429,8 +1012,8 @@
       <div>
         <div class="footer-header">SERVICES</div>
         <div class="footer-links">
-          <a href="services.html">Personal Branding</a>
-          <a href="services.html">Brand Marketing</a>
+          <a href="personal-branding.html">Personal Branding</a>
+          <a href="brand-business-marketing.html">Brand Marketing</a>
           <a href="services.html">Branding &amp; Design</a>
         </div>
       </div>

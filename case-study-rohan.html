@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rohan Mehta Case Study | Marca Creatives</title>
+  <meta name="description" content="See how we scaled Rohan Mehta's personal finance brand from scratch to 276K subscribers and 44M+ total views.">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Rohan Mehta Case Study | Marca Creatives">
+  <meta property="og:description" content="Case study of Rohan Mehta personal branding campaign: +315% growth in reach and 276K subscribers.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="motion.css">
+
+  <!-- Inline style overrides & Custom styling for the case study detail page -->
+  <style>
+    /* ==========================================================================
+       CASE STUDY DETAIL PAGE SPECIFIC STYLES
+       ========================================================================== */
+
+    /* ---- Back Button ---- */
+    .cs-back-bar {
+      padding: 30px 0 10px;
+    }
+    .btn-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted-text);
+      transition: color var(--transition-fast);
+    }
+    .btn-back-link:hover {
+      color: var(--accent-color);
+    }
+
+    /* ---- Let's Talk Button in Header ---- */
+    .nav-btn-lets-talk {
+      display: inline-flex;
+      align-items: center;
+      background: var(--text-color);
+      color: var(--bg-color) !important;
+      padding: 10px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      gap: 10px;
+      transition: transform var(--transition-fast), background-color var(--transition-fast);
+    }
+    .nav-btn-lets-talk:hover {
+      transform: translateY(-2px);
+      background: var(--accent-color);
+      color: var(--white) !important;
+    }
+    .btn-arrow-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.15);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: 14px;
+      line-height: 1;
+      transition: background-color var(--transition-fast);
+    }
+    .nav-btn-lets-talk:hover .btn-arrow-circle {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* ---- Detail Hero Section ---- */
+    .cs-detail-hero {
+      padding: 40px 0 60px;
+      overflow: visible;
+    }
+    .cs-detail-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .cs-detail-hero-left {
+      max-width: 640px;
+    }
+    .cs-detail-hero-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-color);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .cs-detail-hero-title {
+      font-size: 68px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--text-color);
+      margin-bottom: 12px;
+    }
+    .cs-detail-hero-subtitle {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--text-color);
+      margin-bottom: 24px;
+    }
+    .cs-detail-hero-desc {
+      font-size: 16px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    
+    /* CTA buttons */
+    .cs-hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .btn-view-result {
+      display: inline-flex;
+      align-items: center;
+      background: var(--text-color);
+      color: var(--white);
+      padding: 14px 26px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 15px;
+      gap: 12px;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+    }
+    .btn-view-result:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+      color: var(--white);
+    }
+    .btn-view-result .result-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.15);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+    .btn-watch-study {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-color);
+      cursor: pointer;
+      transition: color var(--transition-fast);
+    }
+    .btn-watch-study:hover {
+      color: var(--accent-color);
+    }
+    .btn-watch-study-circle {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      padding-left: 2px;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+    }
+    .btn-watch-study:hover .btn-watch-study-circle {
+      border-color: var(--accent-color);
+      background-color: rgba(228, 83, 15, 0.05);
+      color: var(--accent-color);
+    }
+
+    /* Circle cropped hero image */
+    .cs-detail-hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .circle-image-mask {
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: var(--shadow-premium);
+      border: 4px solid var(--white);
+    }
+    .circle-image-mask img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Floating Trophy badge */
+    .badge-trophy-floating {
+      position: absolute;
+      top: 40px;
+      right: -20px;
+      background: var(--white);
+      box-shadow: var(--shadow-premium-hover);
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(20, 20, 22, 0.05);
+      text-align: center;
+      padding: 10px;
+      z-index: 5;
+      animation: floatBadge 6s ease-in-out infinite;
+    }
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .badge-trophy-icon {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+    .badge-trophy-text {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-color);
+      line-height: 1.1;
+    }
+    .badge-trophy-sub {
+      font-size: 8px;
+      font-weight: 600;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Horizontal Metadata strip */
+    .hero-meta-strip {
+      position: absolute;
+      bottom: 20px;
+      right: -40px;
+      background: var(--text-color);
+      color: var(--bg-color);
+      border-radius: 16px;
+      padding: 16px 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+      z-index: 4;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .meta-item-box {
+      display: flex;
+      flex-direction: column;
+    }
+    .meta-item-label {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .meta-item-val {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    /* ---- KPI Summary Strip ---- */
+    .kpi-stats-strip-wrapper {
+      margin-bottom: 80px;
+    }
+    .kpi-stats-strip {
+      background: var(--white);
+      border: 1px solid rgba(20, 20, 22, 0.08);
+      border-radius: 24px;
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+    .kpi-stat-col {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+    }
+    .kpi-stat-col:not(:last-child) {
+      border-right: 1px solid var(--border-color);
+    }
+    .kpi-stat-icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: rgba(228, 83, 15, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+    .kpi-stat-icon-wrapper svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--accent-color);
+    }
+    .kpi-stat-info h4 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-color);
+      line-height: 1.1;
+      margin-bottom: 2px;
+      letter-spacing: -0.02em;
+    }
+    .kpi-stat-info p {
+      font-size: 12px;
+      color: var(--muted-text);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* ---- Main Split Content Section ---- */
+    .cs-detail-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 80px;
+      align-items: start;
+      padding-bottom: 100px;
+    }
+
+    /* Sticky menu */
+    .cs-side-menu-container {
+      position: sticky;
+      top: 120px;
+    }
+    .cs-side-menu-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted-text);
+      letter-spacing: 0.12em;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .cs-side-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cs-side-menu-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--muted-text);
+      padding: 4px 0;
+      transition: color var(--transition-fast);
+      position: relative;
+    }
+    .cs-side-menu-item:hover {
+      color: var(--text-color);
+    }
+    .cs-side-menu-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+    }
+    .cs-side-menu-item.active {
+      color: var(--accent-color);
+    }
+    .cs-side-menu-item.active .cs-side-menu-num {
+      border-color: var(--accent-color);
+      background-color: rgba(228, 83, 15, 0.05);
+      color: var(--accent-color);
+    }
+
+    /* Right column content blocks */
+    .cs-content-column {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+    }
+    .cs-section {
+      scroll-margin-top: 150px;
+    }
+    .cs-section-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-color);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .cs-section-title {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text-color);
+      margin-bottom: 18px;
+    }
+    .cs-section-desc {
+      font-size: 16px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      margin-bottom: 36px;
+      max-width: 780px;
+    }
+
+    /* ---- Section 1: Challenge cards ---- */
+    .challenge-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .challenge-card-item {
+      background: var(--white);
+      border: 1px solid rgba(20, 20, 22, 0.08);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition-fast);
+    }
+    .challenge-card-item:hover {
+      transform: translateY(-2px);
+    }
+    .challenge-icon-box {
+      width: 40px;
+      height: 40px;
+      background: rgba(228, 83, 15, 0.06);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+    }
+    .challenge-icon-box svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--accent-color);
+    }
+    .challenge-text {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text-color);
+      line-height: 1.4;
+    }
+
+    /* ---- Section 2: Approach Block (Beige Container) ---- */
+    .approach-container-inner {
+      background: #fdfcf9;
+      border: 1px solid var(--border-color);
+      border-radius: 28px;
+      padding: 64px 56px;
+    }
+    .approach-split-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .approach-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      background: var(--text-color);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      gap: 10px;
+      margin-top: 10px;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      width: fit-content;
+    }
+    .approach-cta-btn:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+      color: var(--white);
+    }
+    .approach-cta-btn svg {
+      transition: transform var(--transition-fast);
+    }
+    .approach-cta-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Process steps flow */
+    .process-steps-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+      margin-top: 16px;
+    }
+    .process-steps-timeline::after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      border-top: 1.5px dashed var(--border-color);
+      z-index: 1;
+    }
+    .process-step-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .process-step-icon-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1.5px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+      margin-bottom: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+      transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+    }
+    .process-step-node:hover .process-step-icon-circle {
+      border-color: var(--accent-color);
+      background-color: rgba(228, 83, 15, 0.05);
+      color: var(--accent-color);
+    }
+    .process-step-icon-circle svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+    }
+    .process-step-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: 6px;
+    }
+    .process-step-desc {
+      font-size: 12px;
+      color: var(--muted-text);
+      line-height: 1.4;
+      font-weight: 500;
+      max-width: 150px;
+    }
+
+    /* ---- Section 3: Execution Grid & Mockup ---- */
+    .execution-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .execution-features-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .execution-feature-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .execution-feature-icon-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(228, 83, 15, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+    }
+    .execution-feature-icon-circle svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--accent-color);
+    }
+    .execution-feature-title {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+    .execution-feature-desc {
+      font-size: 13px;
+      color: var(--muted-text);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* Phone Mockup Frame */
+    .execution-mockup-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 480px;
+    }
+    .phone-mockup-frame {
+      width: 250px;
+      height: 460px;
+      border-radius: 36px;
+      border: 10px solid var(--text-color);
+      background-color: var(--white);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+    .phone-mockup-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .phone-mockup-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 18px;
+      background: var(--text-color);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      z-index: 10;
+    }
+    
+    /* Popping stats widget card */
+    .popping-widget-card {
+      position: absolute;
+      bottom: 60px;
+      right: 0px;
+      background: var(--white);
+      border: 1px solid rgba(20, 20, 22, 0.08);
+      border-radius: 16px;
+      padding: 16px;
+      width: 180px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      z-index: 3;
+      animation: popCard 5s ease-in-out infinite;
+    }
+    @keyframes popCard {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(5px, -5px); }
+    }
+    .popping-card-tag {
+      font-size: 8px;
+      font-family: var(--font-mono);
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+    .popping-card-val {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--accent-color);
+      margin-bottom: 2px;
+    }
+    .popping-card-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 8px;
+    }
+    .popping-card-chart {
+      height: 40px;
+      width: 100%;
+    }
+
+    /* ---- Section 4: Results Block (Dark background) ---- */
+    .results-dark-block {
+      background: #111113;
+      border-radius: 28px;
+      padding: 64px 56px;
+      color: var(--dark-text);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .results-text-row {
+      max-width: 680px;
+      margin-bottom: 48px;
+    }
+    .results-text-row .cs-section-eyebrow {
+      color: var(--accent-color);
+    }
+    .results-text-row .cs-section-title {
+      color: var(--dark-text);
+    }
+    .results-text-row .cs-section-desc {
+      color: var(--muted-dark);
+    }
+
+    /* Stats strip inside dark block */
+    .results-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+    }
+    .results-stat-box h4 {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--accent-color);
+      line-height: 1.1;
+      margin-bottom: 6px;
+      letter-spacing: -0.03em;
+    }
+    .results-stat-box p {
+      font-size: 12px;
+      color: var(--muted-dark);
+      font-weight: 500;
+    }
+
+    /* Testimonial Quote block */
+    .results-quote-box {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 30px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 30px 40px;
+      border-radius: 20px;
+    }
+    .quote-mark-orange {
+      font-size: 64px;
+      line-height: 1;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--accent-color);
+      align-self: flex-start;
+      margin-top: -10px;
+    }
+    .quote-body-text {
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: var(--dark-text);
+    }
+    .quote-author-profile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      padding-left: 30px;
+    }
+    .quote-author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .quote-author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .quote-author-meta strong {
+      display: block;
+      font-size: 14px;
+      color: var(--dark-text);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .quote-author-meta span {
+      display: block;
+      font-size: 11px;
+      color: var(--muted-dark);
+      font-weight: 500;
+    }
+
+    /* ---- Section 5: Key Takeaways ---- */
+    .takeaways-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .takeaway-list-item {
+      display: flex;
+      gap: 16px;
+      background: var(--white);
+      border: 1px solid rgba(20, 20, 22, 0.06);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+    }
+    .takeaway-check-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: rgba(228, 83, 15, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+    .takeaway-check-circle svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--accent-color);
+    }
+    .takeaway-info strong {
+      display: block;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: 6px;
+    }
+    .takeaway-info p {
+      font-size: 13.5px;
+      color: var(--muted-text);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* ---- Responsive Design ---- */
+    @media (max-width: 991px) {
+      .cs-detail-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+      }
+      .cs-detail-hero-left {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .cs-hero-actions {
+        justify-content: center;
+      }
+      .circle-image-mask {
+        width: 320px;
+        height: 320px;
+      }
+      .hero-meta-strip {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -20px;
+      }
+      .badge-trophy-floating {
+        top: 0px;
+        right: 0px;
+      }
+      .kpi-stats-strip {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 30px;
+      }
+      .kpi-stat-col:nth-child(even) {
+        border-right: none !important;
+      }
+      .kpi-stat-col:nth-child(1), .kpi-stat-col:nth-child(2) {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 20px;
+      }
+      .cs-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .cs-side-menu-container {
+        position: relative;
+        top: 0;
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 20px;
+      }
+      .cs-side-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .cs-side-menu-item {
+        background: var(--white);
+        border: 1px solid var(--border-color);
+        border-radius: 30px;
+        padding: 6px 16px;
+      }
+      .cs-side-menu-item.active {
+        background: var(--accent-color);
+        color: var(--white) !important;
+        border-color: var(--accent-color);
+      }
+      .cs-side-menu-item .cs-side-menu-num {
+        display: none;
+      }
+      .challenge-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-steps-timeline {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .process-steps-timeline::after {
+        display: none;
+      }
+      .execution-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .execution-mockup-wrapper {
+        height: auto;
+      }
+      .results-stats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+      .results-quote-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .quote-mark-orange {
+        align-self: center;
+        margin-top: 0;
+      }
+      .quote-author-profile {
+        border-left: none;
+        padding-left: 0;
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+    @media (max-width: 768px) {
+      .cs-detail-hero-title {
+        font-size: 46px;
+      }
+      .cs-detail-hero-subtitle {
+        font-size: 20px;
+      }
+      .hero-meta-strip {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px;
+        width: 80%;
+      }
+      .results-stats-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ STICKY NAV ============ -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-text">MARCO</span>
+        <div class="logo-dot"></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#studio">Platform Guide</a>
+        <a href="services.html">Services</a>
+        <a href="work.html" class="active">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn-primary">Start a Project</a>
+        <a href="contact.html" class="btn-arrow" aria-label="Contact Us">&#8599;</a>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ BREADCRUMB BAR ============ -->
+  <div class="cs-back-bar">
+    <div class="container">
+      <a href="work.html" class="btn-back-link">
+        <span>&larr; Back to Case Studies</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="cs-detail-hero">
+    <div class="container cs-detail-hero-grid">
+      <div class="cs-detail-hero-left" data-reveal>
+        <span class="cs-detail-hero-tag">FINANCE BRANDING</span>
+        <h1 class="cs-detail-hero-title">Rohan Mehta</h1>
+        <h2 class="cs-detail-hero-subtitle">Scaling a Personal Finance Brand to New Heights.</h2>
+        <p class="cs-detail-hero-desc">
+          From scratch to scale — we built a strong personal brand, optimized content strategy, and grew a loyal community.
+        </p>
+        <div class="cs-hero-actions">
+          <a href="#results" class="btn-view-result">
+            <span>View Result</span>
+            <span class="result-arrow">&rarr;</span>
+          </a>
+          <div class="btn-watch-study">
+            <span class="btn-watch-study-circle">&#9654;</span>
+            <span>Watch Case Study</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-detail-hero-right" data-reveal data-reveal-delay="100">
+        <!-- Circle cropped jar image -->
+        <div class="circle-image-mask">
+          <img src="assets/hero_arc_3.png" alt="Rohan Mehta Personal Finance Thumbnail Design Visual">
+        </div>
+
+        <!-- Floating Trophy Badge -->
+        <div class="badge-trophy-floating">
+          <div class="badge-trophy-icon">📈</div>
+          <div class="badge-trophy-text">+315%</div>
+          <div class="badge-trophy-sub">Asset Growth</div>
+        </div>
+
+        <!-- Horizontal Metadata strip -->
+        <div class="hero-meta-strip">
+          <div class="meta-item-box">
+            <span class="meta-item-label">Industry</span>
+            <span class="meta-item-val">Personal Finance</span>
+          </div>
+          <div class="meta-item-box">
+            <span class="meta-item-label">Services</span>
+            <span class="meta-item-val">Branding, Content</span>
+          </div>
+          <div class="meta-item-box">
+            <span class="meta-item-label">Timeline</span>
+            <span class="meta-item-val">12 Months</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KPI SUMMARY STRIP ============ -->
+  <div class="container kpi-stats-strip-wrapper" data-reveal>
+    <div class="kpi-stats-strip">
+      <div class="kpi-stat-col">
+        <div class="kpi-stat-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="kpi-stat-info">
+          <h4>276K</h4>
+          <p>Subscribers Gained</p>
+        </div>
+      </div>
+
+      <div class="kpi-stat-col">
+        <div class="kpi-stat-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+        </div>
+        <div class="kpi-stat-info">
+          <h4>44M+</h4>
+          <p>Total Views</p>
+        </div>
+      </div>
+
+      <div class="kpi-stat-col">
+        <div class="kpi-stat-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <div class="kpi-stat-info">
+          <h4>315%</h4>
+          <p>Growth in Reach</p>
+        </div>
+      </div>
+
+      <div class="kpi-stat-col">
+        <div class="kpi-stat-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <div class="kpi-stat-info">
+          <h4>Top 5%</h4>
+          <p>Creator Rankings</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SPLIT GRID CONTENT (SCROLLSPY) ============ -->
+  <section class="container">
+    <div class="cs-detail-layout">
+
+      <!-- Left sticky menu -->
+      <aside class="cs-side-menu-container">
+        <div class="cs-side-menu-title">Case Study Overview</div>
+        <nav class="cs-side-menu">
+          <a href="#challenge" class="cs-side-menu-item active">
+            <span class="cs-side-menu-num">01</span>
+            <span class="cs-side-menu-text">The Challenge</span>
+          </a>
+          <a href="#approach" class="cs-side-menu-item">
+            <span class="cs-side-menu-num">02</span>
+            <span class="cs-side-menu-text">Our Approach</span>
+          </a>
+          <a href="#execution" class="cs-side-menu-item">
+            <span class="cs-side-menu-num">03</span>
+            <span class="cs-side-menu-text">Execution</span>
+          </a>
+          <a href="#results" class="cs-side-menu-item">
+            <span class="cs-side-menu-num">04</span>
+            <span class="cs-side-menu-text">Results</span>
+          </a>
+          <a href="#takeaways" class="cs-side-menu-item">
+            <span class="cs-side-menu-num">05</span>
+            <span class="cs-side-menu-text">Key Takeaways</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Right column content blocks -->
+      <main class="cs-content-column">
+
+        <!-- SECTION 01: THE CHALLENGE -->
+        <section id="challenge" class="cs-section" data-reveal>
+          <span class="cs-section-eyebrow">01. THE CHALLENGE</span>
+          <h3 class="cs-section-title">Zero Foundation in a Saturated Space.</h3>
+          <p class="cs-section-desc">
+            Rohan Mehta had exceptional expertise in personal finance but struggled with zero audience foundation, highly saturated markets, and low click-through rates.
+          </p>
+          
+          <div class="challenge-cards-grid">
+            <div class="challenge-card-item">
+              <div class="challenge-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+              </div>
+              <p class="challenge-text">Zero audience foundation in a saturated finance space</p>
+            </div>
+
+            <div class="challenge-card-item">
+              <div class="challenge-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="12" y1="18" x2="12" y2="12"></line>
+                  <line x1="9" y1="15" x2="15" y2="15"></line>
+                </svg>
+              </div>
+              <p class="challenge-text">Complex financial concepts hard to package in short-form</p>
+            </div>
+
+            <div class="challenge-card-item">
+              <div class="challenge-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+                  <polyline points="17 18 23 18 23 12"></polyline>
+                </svg>
+              </div>
+              <p class="challenge-text">Low click-through rates on initial video uploads</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02: OUR APPROACH -->
+        <section id="approach" class="cs-section" data-reveal>
+          <div class="approach-container-inner">
+            <span class="cs-section-eyebrow">02. OUR APPROACH</span>
+            <h3 class="cs-section-title">Visual Brand Systems &amp; Retention Architecture.</h3>
+            <p class="cs-section-desc">
+              We developed a programmatic content system that converted Rohan's expert finance advice into high-retention video assets paired with CTR-optimized thumbnails.
+            </p>
+            
+            <div class="approach-split-layout">
+              <div class="process-steps-timeline">
+                <div class="process-step-node">
+                  <div class="process-step-icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                  </div>
+                  <strong class="process-step-title">Discover</strong>
+                  <p class="process-step-desc">Competitive analysis &amp; channel audience profiling</p>
+                </div>
+
+                <div class="process-step-node">
+                  <div class="process-step-icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="6"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                  </div>
+                  <strong class="process-step-title">Define</strong>
+                  <p class="process-step-desc">Content scripting matrix &amp; visual brand identity</p>
+                </div>
+
+                <div class="process-step-node">
+                  <div class="process-step-icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 2L11 13"></path>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </div>
+                  <strong class="process-step-title">Deliver</strong>
+                  <p class="process-step-desc">Short-form video sequencing &amp; high-CTR thumbnail engine</p>
+                </div>
+
+                <div class="process-step-node">
+                  <div class="process-step-icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="20" x2="18" y2="10"></line>
+                      <line x1="12" y1="20" x2="12" y2="4"></line>
+                      <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                  </div>
+                  <strong class="process-step-title">Optimize</strong>
+                  <p class="process-step-desc">YouTube retention analytics &amp; format testing</p>
+                </div>
+              </div>
+
+              <a href="services.html" class="approach-cta-btn">
+                <span>Our Services</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 03: EXECUTION -->
+        <section id="execution" class="cs-section" data-reveal>
+          <span class="cs-section-eyebrow">03. EXECUTION</span>
+          <h3 class="cs-section-title">Bringing the Strategy to Life.</h3>
+          <p class="cs-section-desc">
+            From compelling hook scripting to retention-tuned edits, we built a consistent content production pipeline that dominated feeds.
+          </p>
+
+          <div class="execution-layout-grid">
+            <div class="execution-features-list">
+              <div class="execution-feature-box">
+                <div class="execution-feature-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                  </svg>
+                </div>
+                <strong class="execution-feature-title">Channel Strategy</strong>
+                <p class="execution-feature-desc">Built a robust content pillar system targeting high-intent topics.</p>
+              </div>
+
+              <div class="execution-feature-box">
+                <div class="execution-feature-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <strong class="execution-feature-title">Scripting Engine</strong>
+                <p class="execution-feature-desc">Developed hook-based scripts to maximize average duration watched.</p>
+              </div>
+
+              <div class="execution-feature-box">
+                <div class="execution-feature-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <strong class="execution-feature-title">Custom Thumbnails</strong>
+                <p class="execution-feature-desc">Designed high-contrast visual systems to elevate CTR.</p>
+              </div>
+
+              <div class="execution-feature-box">
+                <div class="execution-feature-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  </svg>
+                </div>
+                <strong class="execution-feature-title">Short-Form Reels</strong>
+                <p class="execution-feature-desc">Repurposed long-form video clips into high-yield YouTube Shorts.</p>
+              </div>
+            </div>
+
+            <!-- Phone visual mockup -->
+            <div class="execution-mockup-wrapper">
+              <div class="phone-mockup-frame">
+                <div class="phone-mockup-notch"></div>
+                <!-- Mockup screen displays Instagram-like feed -->
+                <img src="assets/hero_arc_3.png" alt="Rohan Mehta personal branding content on mobile screen mockup">
+              </div>
+
+              <!-- Popping stats widget card -->
+              <div class="popping-widget-card">
+                <span class="popping-card-tag">Campaign Performance</span>
+                <div class="popping-card-val">+315%</div>
+                <div class="popping-card-label">Growth in Reach</div>
+                <!-- Mini custom SVG line chart inside widget -->
+                <div class="popping-card-chart">
+                  <svg width="100%" height="100%" viewBox="0 0 150 40" preserveAspectRatio="none">
+                    <path d="M 0 35 Q 30 30 60 20 T 120 5 L 150 2" fill="none" stroke="#e4530f" stroke-width="2.5" stroke-linecap="round"></path>
+                    <circle cx="150" cy="2" r="3" fill="#e4530f"></circle>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 04: RESULTS (Dark background block) -->
+        <section id="results" class="cs-section" data-reveal>
+          <div class="results-dark-block">
+            <div class="results-text-row">
+              <span class="cs-section-eyebrow">04. RESULTS</span>
+              <h3 class="cs-section-title">Real Results, Real Impact.</h3>
+              <p class="cs-section-desc">
+                Our content strategy delivered rapid channel scaling and robust community growth.
+              </p>
+            </div>
+
+            <div class="results-stats-row">
+              <div class="results-stat-box">
+                <h4>276K</h4>
+                <p>Subscribers Gained</p>
+              </div>
+              <div class="results-stat-box">
+                <h4>44M+</h4>
+                <p>Total Views</p>
+              </div>
+              <div class="results-stat-box">
+                <h4>315%</h4>
+                <p>Growth in Reach</p>
+              </div>
+              <div class="results-stat-box">
+                <h4>Top 5%</h4>
+                <p>Creator Rankings</p>
+              </div>
+            </div>
+
+            <!-- Testimonial Quote -->
+            <div class="results-quote-box">
+              <span class="quote-mark-orange">“</span>
+              <p class="quote-body-text">
+                MARCO. transformed my channel. Their hook-oriented scripts and visual thumbnail systems drove results that blew my expectations out of the water.
+              </p>
+              <div class="quote-author-profile">
+                <div class="quote-author-avatar">
+                  <img src="assets/team_marcus.png" alt="Rohan Mehta Content Creator Profile Portrait">
+                </div>
+                <div class="quote-author-meta">
+                  <strong>Rohan Mehta</strong>
+                  <span>Personal Finance Creator</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 05: KEY TAKEAWAYS -->
+        <section id="takeaways" class="cs-section" data-reveal>
+          <span class="cs-section-eyebrow">05. KEY TAKEAWAYS</span>
+          <h3 class="cs-section-title">Lessons in Content Architecture.</h3>
+          <p class="cs-section-desc">
+            Our collaboration with Rohan Mehta highlighted critical principles of financial personal branding:
+          </p>
+
+          <div class="takeaways-list">
+            <div class="takeaway-list-item">
+              <div class="takeaway-check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="takeaway-info">
+                <strong>Hook is Everything</strong>
+                <p>Re-engineering the first 5 seconds of videos improved viewer retention by 42%.</p>
+              </div>
+            </div>
+
+            <div class="takeaway-list-item">
+              <div class="takeaway-check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="takeaway-info">
+                <strong>Thumbnails Drive Views</strong>
+                <p>Introducing unified face-emotion thumbnail systems boosted click-through-rate (CTR) by 8.4%.</p>
+              </div>
+            </div>
+
+            <div class="takeaway-list-item">
+              <div class="takeaway-check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="takeaway-info">
+                <strong>Diversification Wins</strong>
+                <p>Cross-posting reels to TikTok and YouTube Shorts added 120K followers within 90 days.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="container">
+    <div class="cs-cta-banner" data-reveal>
+      <div class="cs-cta-left">
+        <div class="cs-cta-badge-circle">
+          <!-- Paper plane icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </div>
+        <div class="cs-cta-texts">
+          <h4 class="cs-cta-title-main">Ready to Build Your <em>Success Story?</em></h4>
+          <p class="cs-cta-desc">Let's create measurable impact for your brand.</p>
+        </div>
+      </div>
+      <a href="contact.html" class="cs-cta-btn-start">
+        <span>Start Your Project</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <span class="logo-text text-white">MARCO</span>
+          <div class="logo-dot"></div>
+        </a>
+        <p class="footer-about-text">A full-stack content agency building personal brands and business brands from the ground up.</p>
+      </div>
+      <div>
+        <div class="footer-header">SERVICES</div>
+        <div class="footer-links">
+          <a href="personal-branding.html">Personal Branding</a>
+          <a href="brand-business-marketing.html">Brand Marketing</a>
+          <a href="services.html">Branding &amp; Design</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">COMPANY</div>
+        <div class="footer-links">
+          <a href="work.html">Case Studies</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-header">SOCIAL</div>
+        <div class="footer-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Marca Creatives. All rights reserved.</span>
+      <span class="footer-adapted">design inspired by marca prototype</span>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger Script Loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+  <script src="motion.js"></script>
+
+  <!-- ScrollSpy functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuItems = document.querySelectorAll('.cs-side-menu-item');
+      const sections = document.querySelectorAll('.cs-section');
+
+      // ScrollSpy logic using IntersectionObserver
+      const observerOptions = {
+        root: null,
+        rootMargin: '-25% 0px -55% 0px', // Trigger when section occupies the active mid-region
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            menuItems.forEach(item => {
+              if (item.getAttribute('href') === `#${id}`) {
+                item.classList.add('active');
+              } else {
+                item.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>

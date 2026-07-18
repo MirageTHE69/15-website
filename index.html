@@ -14,7 +14,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -33,10 +33,10 @@
       <div class="nav-links" id="navLinks">
         <a href="#studio">Platform Guide</a>
         <a href="services.html">Services</a>
-        <a href="#work">Case Studies</a>
+        <a href="work.html">Case Studies</a>
         <a href="about.html">About</a>
-        <a href="#reels">Portfolio</a>
-        <a href="#faq">FAQ</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
       </div>
       <div class="nav-cta">
         <a href="contact.html" class="btn-primary">Start a Project</a>
@@ -531,61 +531,180 @@
   </section>
 
   <!-- ============ CASE STUDIES ============ -->
-  <section id="work" class="cases-section">
+  <section id="work" class="cases-section cs2">
     <div class="container">
-      <div class="cases-header">
-        <div data-reveal>
-          <div class="section-tag">CASE STUDIES</div>
-          <h2 class="section-title margin-0">What growth looks like in practice</h2>
+
+      <!-- Header -->
+      <div class="cs2-header" data-reveal>
+        <div class="cs2-header-left">
+          <div class="cs2-eyebrow">
+            <span class="cs2-eyebrow-dot"></span>
+            <span>CASE STUDIES</span>
+          </div>
+          <h2 class="cs2-title">What Growth<br>Looks Like <span class="cs2-italic">in Practice.</span></h2>
+          <p class="cs2-subtitle">Real brands. Real challenges. Measurable results<br>that speak for themselves.</p>
         </div>
-        <a data-reveal href="#work" class="cases-all-link">All case studies &rarr;</a>
+        <div class="cs2-header-right">
+          <a href="#contact" class="cs2-all-link" id="explore-case-studies">
+            <span class="cs2-all-link-text">Explore all case studies</span>
+            <span class="cs2-all-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        </div>
       </div>
-      
-      <div class="cases-grid">
-        <!-- Case Study 1 -->
-        <article class="case-card" data-reveal>
-          <div class="case-image-wrapper">
-            <img src="assets/hero_arc_1.png" alt="Dr. Aanya Shah Case Study">
+
+      <!-- Flat Grid Container -->
+      <div class="cs2-rows">
+
+        <!-- ROW 01 -->
+        <div class="cs2-col-text cs2-row-1" data-reveal>
+          <div class="cs2-num">01</div>
+          <div class="cs2-cat">Personal Branding</div>
+          <h3 class="cs2-name">Dr. Aanya Shah</h3>
+          <p class="cs2-desc">Cosmetic dermatology — from near-zero presence to 5M+ view videos. Clinic-side shoots &amp; retention-tuned scripting.</p>
+          <a href="case-study-aanya.html" class="cs2-link" id="case-aanya">
+            <span>View case study</span>
+            <span class="cs2-link-arrow">&rarr;</span>
+          </a>
+        </div>
+        <div class="cs2-card cs2-row-1 cs2-card--wide" data-reveal>
+          <div class="cs2-card-img">
+            <img src="assets/hero_arc_1.png" alt="Dr. Aanya Shah case study">
           </div>
-          <div class="case-content">
-            <div class="case-tag">PERSONAL BRANDING &middot; DOCTOR</div>
-            <div class="case-stat">2.1K &rarr; 418K</div>
-            <div class="case-substat">followers &middot; 16 months &middot; 62M+ views</div>
-            <h3 class="case-title">Dr. Aanya Shah</h3>
-            <p class="case-description">Cosmetic dermatology — from near-zero presence to three 5M+ view videos. Clinic-side shoots &amp; retention-tuned scripting.</p>
-            <a href="#contact" class="case-link">Read case study &rarr;</a>
+          <div class="cs2-card-body">
+            <div class="cs2-card-stats">
+              <div class="cs2-card-stat">
+                <div class="cs2-stat-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                </div>
+                <div class="cs2-stat-details">
+                  <span class="cs2-stat-label">Followers</span>
+                  <span class="cs2-stat-val">2.1K <span class="arrow-orange">&rarr;</span> 418K</span>
+                </div>
+              </div>
+              <div class="cs2-card-stat">
+                <div class="cs2-stat-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="cs2-stat-details">
+                  <span class="cs2-stat-label">Total Views</span>
+                  <span class="cs2-stat-val">62M+</span>
+                </div>
+              </div>
+            </div>
+            <a href="case-study-aanya.html" class="cs2-card-arrow-btn" aria-label="View case study">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
           </div>
-        </article>
-        
-        <!-- Case Study 2 -->
-        <article class="case-card" data-reveal data-reveal-delay="110">
-          <div class="case-image-wrapper">
-            <img src="assets/hero_arc_3.png" alt="Rohan Mehta Case Study">
+        </div>
+
+        <!-- ROW 02 -->
+        <div class="cs2-col-text cs2-row-2" data-reveal data-reveal-delay="80">
+          <div class="cs2-num">02</div>
+          <div class="cs2-cat">Finance Branding</div>
+          <h3 class="cs2-name">Rohan Mehta</h3>
+          <p class="cs2-desc">Personal finance channel built from scratch, averaging 1.2M+ views per upload with custom high-CTR thumbnail system.</p>
+          <a href="case-study-rohan.html" class="cs2-link" id="case-rohan">
+            <span>View case study</span>
+            <span class="cs2-link-arrow">&rarr;</span>
+          </a>
+        </div>
+        <div class="cs2-card cs2-row-2" data-reveal data-reveal-delay="80">
+          <div class="cs2-card-img cs2-card-img--dark">
+            <img src="assets/hero_arc_3.png" alt="Rohan Mehta case study">
           </div>
-          <div class="case-content">
-            <div class="case-tag">PERSONAL BRANDING &middot; FINANCE</div>
-            <div class="case-stat">0 &rarr; 276K</div>
-            <div class="case-substat">subscribers &middot; 11 months &middot; 44M+ views</div>
-            <h3 class="case-title">Rohan Mehta</h3>
-            <p class="case-description">Personal finance channel built from scratch, averaging 1.2M+ views per upload with custom high-CTR thumbnail system.</p>
-            <a href="#contact" class="case-link">Read case study &rarr;</a>
+          <div class="cs2-card-body">
+            <div class="cs2-card-stats">
+              <div class="cs2-card-stat">
+                <div class="cs2-stat-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="12" cy="12" r="4" />
+                    <line x1="12" y1="8" x2="12" y2="10" />
+                    <line x1="12" y1="14" x2="12" y2="16" />
+                  </svg>
+                </div>
+                <div class="cs2-stat-details">
+                  <span class="cs2-stat-label">Subscribers</span>
+                  <span class="cs2-stat-val">0 <span class="arrow-orange">&rarr;</span> 276K</span>
+                </div>
+              </div>
+              <div class="cs2-card-stat">
+                <div class="cs2-stat-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="cs2-stat-details">
+                  <span class="cs2-stat-label">Total Views</span>
+                  <span class="cs2-stat-val">44M+</span>
+                </div>
+              </div>
+            </div>
+            <a href="case-study-rohan.html" class="cs2-card-arrow-btn" aria-label="View case study">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
           </div>
-        </article>
-        
-        <!-- Case Study 3 -->
-        <article class="case-card" data-reveal data-reveal-delay="220">
-          <div class="case-image-wrapper">
-            <img src="assets/hero_arc_2.png" alt="Nutty Affair Case Study">
+        </div>
+
+        <!-- ROW 03 -->
+        <div class="cs2-col-text cs2-row-3" data-reveal data-reveal-delay="160">
+          <div class="cs2-num">03</div>
+          <div class="cs2-cat">Consumer Marketing</div>
+          <h3 class="cs2-name">Nutty Affair</h3>
+          <p class="cs2-desc">Hero brand launch campaign for a gourmet nut butter line. Exceeded retail target placement by 150% with premium video ads.</p>
+          <a href="case-study-nutty.html" class="cs2-link" id="case-nutty">
+            <span>View case study</span>
+            <span class="cs2-link-arrow">&rarr;</span>
+          </a>
+        </div>
+        <div class="cs2-card cs2-row-3" data-reveal data-reveal-delay="160">
+          <div class="cs2-card-img">
+            <img src="assets/hero_arc_2.png" alt="Nutty Affair case study">
           </div>
-          <div class="case-content">
-            <div class="case-tag">BRAND MARKETING &middot; CONSUMER</div>
-            <div class="case-stat">5M+</div>
-            <div class="case-substat">campaign reach &middot; 6 months &middot; +42% sales lift</div>
-            <h3 class="case-title">Nutty Affair</h3>
-            <p class="case-description">Hero brand launch campaign for a gourmet nut butter line. Exceeded retail target placement by 150% with premium video ads.</p>
-            <a href="#contact" class="case-link">Read case study &rarr;</a>
+          <div class="cs2-card-body">
+            <div class="cs2-card-stats">
+              <div class="cs2-card-stat">
+                <div class="cs2-stat-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                </div>
+                <div class="cs2-stat-details">
+                  <span class="cs2-stat-label">Campaign Reach</span>
+                  <span class="cs2-stat-val">5M+</span>
+                </div>
+              </div>
+              <div class="cs2-card-stat">
+                <div class="cs2-stat-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                </div>
+                <div class="cs2-stat-details">
+                  <span class="cs2-stat-label">Sales Lift</span>
+                  <span class="cs2-stat-val">+42%</span>
+                </div>
+              </div>
+            </div>
+            <a href="case-study-nutty.html" class="cs2-card-arrow-btn" aria-label="View case study">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
           </div>
-        </article>
+        </div>
+
+        <!-- SIDEBAR CTA CARD -->
+        <div class="cs2-sidebar-cta" data-reveal data-reveal-delay="200">
+          <div class="cs2-cta-card">
+            <div class="cs2-cta-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h4 class="cs2-cta-title">Every Brand Has a Story. We Help It <span class="cs2-italic">Drive Growth.</span></h4>
+            <p class="cs2-cta-sub">Strategy meets creativity. Execution drives impact. Results you can measure.</p>
+            <a href="contact.html" class="cs2-cta-btn" id="cs2-work-with-us">
+              <span>Work With Us</span>
+              <span class="cs2-cta-btn-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
