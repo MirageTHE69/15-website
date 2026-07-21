@@ -975,6 +975,45 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* CTA Banner explicit inline safety styles */
+    .cs-cta-banner {
+      background: var(--white);
+      border: 1px solid rgba(20, 20, 22, 0.08);
+      border-radius: 28px;
+      padding: 48px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 40px;
+      margin-bottom: 100px;
+      box-shadow: var(--shadow-card);
+    }
+    .cs-cta-left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .cs-cta-badge-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: rgba(228, 83, 15, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+    .cs-cta-badge-circle svg {
+      width: 24px !important;
+      height: 24px !important;
+      max-width: 24px !important;
+      max-height: 24px !important;
+      stroke: var(--accent-color);
+      fill: none !important;
+    }
   </style>
 </head>
 <body>
@@ -1461,9 +1500,9 @@
       <div class="cs-cta-left">
         <div class="cs-cta-badge-circle">
           <!-- Paper plane icon -->
-          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px; max-width:24px; max-height:24px;">
             <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            <polygon points="22 2 15 22 11 13 2 9 22 2" fill="none"></polygon>
           </svg>
         </div>
         <div class="cs-cta-texts">

@@ -317,11 +317,10 @@ img {
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 64px 24px 0;
+  padding: 64px 24px 20px;
   overflow: hidden;
 }
 
@@ -380,19 +379,18 @@ img {
   position: relative;
   z-index: 5;
   width: 100%;
-  flex: 1;
-  min-height: 480px;
-  margin-top: 60px; /* Spacing Tweak: increased margin to add space above the wheel */
+  height: 480px;
+  margin-top: 40px;
+  overflow: hidden;
 }
 
 .arc-wheel-wrapper {
   position: absolute;
   left: 50%;
-  top: 2540px; /* Spacing Tweak: pushed apex down to add breathing space below description */
+  top: 2540px;
   width: 0;
   height: 0;
-  transform: rotate(calc(-1 * var(--scroll-rotation, 0deg))); /* Dynamic scroll rotation! */
-  transition: transform 0.15s ease-out; /* Smooth inertia ease */
+  transform: rotate(calc(-1 * var(--scroll-rotation, 0deg)));
   will-change: transform;
 }
 
@@ -470,21 +468,26 @@ img {
 }
 
 /* ==========================================================================
-   LOGO MARQUEE
+   CLIENT LOGO MARQUEE (DEDICATED SECTION)
    ========================================================================== */
 .logo-marquee-section {
   position: relative;
   z-index: 20;
   width: 100%;
-  padding: 6px 0 30px;
+  padding: 56px 0 52px;
+  background: var(--white);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logo-marquee-title {
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--muted-text);
-  font-weight: 500;
-  margin-bottom: 18px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
 .logo-marquee-wrapper {
@@ -5227,6 +5230,115 @@ img {
 @media (max-width: 480px) {
   .contact-why-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL SVG SAFETY & CASE STUDY CTA BANNER SYSTEM
+   ========================================================================== */
+svg {
+  max-width: 100%;
+}
+
+.cs-cta-banner {
+  background: var(--white);
+  border: 1px solid rgba(20, 20, 22, 0.08);
+  border-radius: 28px;
+  padding: 48px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  box-shadow: var(--shadow-card);
+}
+
+.cs-cta-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.cs-cta-badge-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(228, 83, 15, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.cs-cta-badge-circle svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent-color);
+  fill: none;
+}
+
+.cs-cta-title-main {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-color);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.cs-cta-title-main em {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.cs-cta-desc {
+  font-size: 15px;
+  color: var(--muted-text);
+  font-weight: 500;
+}
+
+.cs-cta-btn-start {
+  background: var(--text-color);
+  color: var(--white);
+  border-radius: 40px;
+  padding: 16px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.cs-cta-btn-start:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+  color: var(--white);
+}
+
+.cs-cta-btn-start svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  transition: transform var(--transition-fast);
+}
+
+.cs-cta-btn-start:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .cs-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 30px;
+    gap: 24px;
   }
 }
 

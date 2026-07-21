@@ -406,18 +406,9 @@
       window.addEventListener('scroll', hideIndicator, { passive: true });
     }
 
-    /* Mouse parallax on hero arc */
-    if (arcWrap && !isMobile()) {
-      hero.addEventListener('mousemove', e => {
-        const cx = window.innerWidth  / 2;
-        const cy = window.innerHeight / 2;
-        const dx = (e.clientX - cx) / cx;
-        const dy = (e.clientY - cy) / cy;
-        gsap.to(arcWrap, {
-          x: dx * 18, y: dy * 10,
-          duration: 1.2, ease: EASE.silk
-        });
-      });
+    /* Arc wheel fixed position - mouse parallax disabled to keep location locked */
+    if (arcWrap) {
+      gsap.set(arcWrap, { x: 0, y: 0 });
     }
 
     return heroTL;
